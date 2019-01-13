@@ -1,2 +1,2 @@
-# chat-spa
+# Chat
 Chat single page application

@@ -1,7 +1,5 @@
 # Logs
 logs
-*.log
-npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -15,11 +13,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
-
 # nyc test coverage
-.nyc_output
-
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -37,8 +31,6 @@ node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
-typings/
-
 # Optional npm cache directory
 .npm
 
@@ -59,3 +51,20 @@ typings/
 
 # next.js build output
 .next
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.idea/
+public/
