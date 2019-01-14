@@ -1,2 +1,2 @@
-# Chat
-Chat single page application
+# Chat 
+A chat single page application.
