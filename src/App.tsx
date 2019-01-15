@@ -1,11 +1,12 @@
 import * as React from 'react';
+import Navigation from "./components/Navigation";
 
 class App extends React.Component {
   public render() {
     return (
-      <div>
-          Kaboom!
-      </div>
+      <React.Fragment>
+        <Navigation />
+      </React.Fragment>
     );
   }
 }
