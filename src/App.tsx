@@ -1,12 +1,13 @@
 import * as React from 'react';
+import * as translationsEN from './translations/translations-en.json';
+import {AppContextProvider} from './AppContext';
 import Navigation from "./components/Navigation";
-import TranslationProvider from './translations/TranslationProvider';
 
 class App extends React.Component {
     public render() {
-        return <TranslationProvider>
+        return <AppContextProvider value={translationsEN}>
             <Navigation/>
-        </TranslationProvider>
+        </AppContextProvider>
     }
 }
 
