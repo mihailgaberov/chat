@@ -1,11 +1,12 @@
 import * as React from 'react';
 import {IAppContext, withAppContext} from '../../../utilities/AppContext';
+import StyledPageContainer from '../StyledPageContainer';
 
 const ChatPage = ({appContext}: { appContext: IAppContext }) =>
   (
-    <div>
+    <StyledPageContainer>
       <h3>{appContext.nav.chatTabLabel}</h3>
-    </div>
+    </StyledPageContainer>
   );
 
 export default withAppContext(ChatPage as React.FunctionComponent);
