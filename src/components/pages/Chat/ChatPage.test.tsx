@@ -1,4 +1,4 @@
-import {shallow} from "enzyme";
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import ChatPage from './ChatPage';
 

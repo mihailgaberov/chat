@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {IAppContext, withAppContext} from "../../../utilities/AppContext";
+import {IAppContext, withAppContext} from '../../../utilities/AppContext';
 
 const ChatPage = ({appContext}: { appContext: IAppContext }) =>
   (

@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import Navigation from './Navigation';
+import AppRouter from './AppRouter';
 
 const setup = () => {
-  return shallow(<Navigation />)
+    return shallow(<AppRouter />)
 };
 
-describe('Navigation component', () => {
+describe('AppRouter component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)

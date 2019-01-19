@@ -1,14 +1,14 @@
-import * as React from "react";
-import * as Enzyme from "enzyme";
-import * as Adapter from "enzyme-adapter-react-16";
-import {createSerializer} from "enzyme-to-json";
-import * as sinon from "sinon";
-import {mount, render, shallow} from "enzyme";
+import * as React from 'react';
+import * as Enzyme from 'enzyme';
+import * as Adapter from 'enzyme-adapter-react-16';
+import {createSerializer} from 'enzyme-to-json';
+import * as sinon from 'sinon';
+import {mount, render, shallow} from 'enzyme';
 
 // Set the default serializer for Jest to be the from enzyme-to-json
 // This produces an easier to read (for humans) serialized format.
 // @ts-ignore
-expect.addSnapshotSerializer(createSerializer({ mode: "deep" }));
+expect.addSnapshotSerializer(createSerializer({ mode: 'deep' }));
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
