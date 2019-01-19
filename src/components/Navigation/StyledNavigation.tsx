@@ -23,16 +23,16 @@ const StyledNavigation = styled("ul")`
       text-decoration: none;
         
       &:hover {
-        background-color: #111;
+        background-color: ${props => props.theme.tertiaryColor};
       }
       
       &.active {
-        background-color: #111;
+        background-color: ${props => props.theme.tertiaryColor};
         border-bottom: 3px solid #ccc;
       }
       
-      i {
-        float: left;
+      span {
+        padding: 14px;
       }
     }  
   }
