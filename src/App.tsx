@@ -1,8 +1,10 @@
 import * as React from 'react';
-import {AppContextProvider} from './AppContext';
-import Navigation from "./components/Navigation";
 import * as translationsDE from './translations/translations-de.json';
 import * as translationsEN from './translations/translations-en.json';
+
+import Navigation from "./components/Navigation";
+import {AppContextProvider} from './utilities/AppContext';
+
 
 class App extends React.Component {
     public lang = 'EN';

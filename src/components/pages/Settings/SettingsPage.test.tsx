@@ -1,12 +1,12 @@
 import {shallow} from "enzyme";
 import * as React from 'react';
-import Navigation from './Navigation';
+import ChatPage from './SettingsPage';
 
 const setup = () => {
-    return shallow(<Navigation />)
+  return shallow(<ChatPage />)
 };
 
-describe('Navigation component', () => {
+describe('ChatPage', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
