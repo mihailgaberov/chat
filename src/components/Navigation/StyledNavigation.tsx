@@ -34,13 +34,22 @@ const StyledNavigation = styled("ul")`
       span {
         padding: 14px;
       }
-    }  
-    
-    .blink {
-      background-color: ${props => props.theme.quaternaryColor} !important;
     }
     
-    .no-blink {
+    .blinking {
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        background-color: ${props => props.theme.secondaryColor};
+      }
+      100% {
+        background-color: ${props => props.theme.quaternaryColor};
+      }
+    }
+    
+    .no-blinking {
       background-color: unset;
     }
   }

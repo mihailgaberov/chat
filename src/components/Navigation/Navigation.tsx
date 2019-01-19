@@ -24,8 +24,8 @@ class Navigation extends React.Component<INavProps, INavState> {
   }
 
   public componentDidMount(): void {
-    // TODO: Temporary for testing -> tab will blink when new message is received
-    setTimeout(this.blink, 2000);
+    // TODO: Temporary here for testing -> tab will startBlinking when new message is received
+    // setTimeout(this.startBlinking, 2000);
   }
 
   public render() {
@@ -35,7 +35,7 @@ class Navigation extends React.Component<INavProps, INavState> {
     return appContext && (
       <StyledNavigation>
         <li>
-          <NavLink exact={true} activeClassName='active' className={shouldBlink ? 'blink' : 'no-blink'}
+          <NavLink exact={true} activeClassName='active' className={shouldBlink ? 'blinking' : 'no-blinking'}
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
             <span>Chat</span>
@@ -51,17 +51,17 @@ class Navigation extends React.Component<INavProps, INavState> {
     );
   }
 
-  private blink = (): void => {
+  /*private startBlinking = (): void => {
     this.setState({
       shouldBlink: true
     });
+  };*/
 
-    setTimeout(() => {
-      this.setState({
-        shouldBlink: false
-      });
-    }, 500);
-  };
+  /*private stopBlinking = (): void => {
+    this.setState({
+      shouldBlink: false
+    });
+  };*/
 }
 
 export default withAppContext(Navigation as React.ComponentClass);
