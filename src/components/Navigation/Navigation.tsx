@@ -1,17 +1,19 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import StyledNavigation from './StyledNavigation';
+
+import {NavLink} from 'react-router-dom';
 import {IAppContext, withAppContext} from '../../utilities/AppContext';
 
 const Navigation = ({ appContext}: {appContext: IAppContext} ) =>
   appContext && (
-    <ul>
+    <StyledNavigation>
       <li>
-        <Link to='/chat'>Chat</Link>
+        <NavLink exact={true} activeClassName='active' to='/chat'>Chat</NavLink>
       </li>
       <li>
-        <Link to='/settings'>Settings</Link>
+        <NavLink activeClassName='active' to='/settings'>Settings</NavLink>
       </li>
-    </ul>
+    </StyledNavigation>
   );
 
 export default withAppContext(Navigation);
