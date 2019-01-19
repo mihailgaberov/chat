@@ -35,6 +35,14 @@ const StyledNavigation = styled("ul")`
         padding: 14px;
       }
     }  
+    
+    .blink {
+      background-color: ${props => props.theme.quaternaryColor} !important;
+    }
+    
+    .no-blink {
+      background-color: unset;
+    }
   }
 `;
 
