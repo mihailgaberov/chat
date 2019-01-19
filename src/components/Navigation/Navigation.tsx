@@ -39,7 +39,7 @@ class Navigation extends React.Component<INavProps, INavState> {
           <NavLink exact={true} activeClassName='active' className={shouldBlink ? 'blinking' : 'no-blinking'}
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
-            <UnreadMessagesCounter count={10}/>
+            <UnreadMessagesCounter count={13}/>
             <span>Chat</span>
           </NavLink>
         </li>

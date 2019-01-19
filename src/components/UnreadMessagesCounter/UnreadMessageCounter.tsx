@@ -5,10 +5,16 @@ interface IUnreadMessagesCounterProps {
   count: number;
 }
 
-const UnreadMessagesCounter = ({count}: IUnreadMessagesCounterProps): any => (
-    count && <StyledUnreadMessagesCounter>
-      {count}
-    </StyledUnreadMessagesCounter>
-  );
+class UnreadMessagesCounter extends React.Component<IUnreadMessagesCounterProps> {
+  public render() {
+    const {count} = this.props;
+
+    return (
+      count && <StyledUnreadMessagesCounter>
+        {count}
+      </StyledUnreadMessagesCounter>
+    );
+  }
+}
 
 export default UnreadMessagesCounter;
