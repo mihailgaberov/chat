@@ -1,6 +1,6 @@
+import {shallow} from "enzyme";
 import * as React from 'react';
 import Navigation from './Navigation';
-import {shallow} from "enzyme";
 
 const setup = () => {
     return shallow(<Navigation />)

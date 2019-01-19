@@ -1,7 +1,7 @@
 {
   "lang": "DE",
   "nav": {
-    "chat": "Schnacken",
-    "settings": "Konfigurieren"
+    "chatTabLabel": "Gespräch",
+    "settingsTabLabel": "Sprache ändern"
   }
 }
