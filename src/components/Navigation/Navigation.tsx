@@ -5,6 +5,7 @@ import {faCog, faComment} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
 import {withAppContext} from '../../utilities/AppContext';
+import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
 
 interface INavProps {
   appContext: {};
@@ -38,6 +39,7 @@ class Navigation extends React.Component<INavProps, INavState> {
           <NavLink exact={true} activeClassName='active' className={shouldBlink ? 'blinking' : 'no-blinking'}
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
+            <UnreadMessagesCounter count={10}/>
             <span>Chat</span>
           </NavLink>
         </li>

@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import ChatPage from '../pages/Chat/ChatPage';
 import SettingsPage from '../pages/Settings/SettingsPage';
 
-const AppRouter = () => {
+const AppRouter: React.FunctionComponent = () => {
   return (
     <HashRouter>
       <React.Fragment>

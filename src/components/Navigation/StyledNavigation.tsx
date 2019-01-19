@@ -33,6 +33,7 @@ const StyledNavigation = styled("ul")`
       
       span {
         padding: 14px;
+        font-size: 1.4em;
       }
     }
     
