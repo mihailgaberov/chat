@@ -1,3 +1,5 @@
+import { debounce } from 'lodash';
+
 // Create a record
 export const createRecord = (key: string, value: string): { error?: string } | void => {
   if (!key || !value) { return { error: 'Store to localStorage failed. Invalid key or value.' }; }
@@ -29,3 +31,13 @@ export const hasStoredItems = (): boolean => localStorage.length > 0;
 
 // Check for support
 export const isLocalStorageSupported = (): boolean => !!window.localStorage;
+
+export const storeToLocalStorageDebounced = debounce((key: string, value: string): void => {
+  if (isLocalStorageSupported()) {
+    if (readRecord(key)) {
+      updateRecord(key, value);
+    } else {
+      createRecord(key, value);
+    }
+  }
+}, 1500, {leading: false});
