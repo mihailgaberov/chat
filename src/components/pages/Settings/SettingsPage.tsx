@@ -1,5 +1,8 @@
 import * as React from 'react';
 import ClockModeSelector from '../../ClockModeSelector';
+import LanguageSelector from '../../LanguageSelector';
+import ResetButton from '../../ResetButton';
+import SendingOptions from '../../SendingOptions';
 import ThemeSelector from '../../ThemeSelector';
 import UserProfile from '../../UserProfile';
 
@@ -12,6 +15,9 @@ const SettingsPage = ({appContext}: { appContext: IAppContext }) => (
     <UserProfile/>
     <ThemeSelector/>
     <ClockModeSelector/>
+    <SendingOptions/>
+    <LanguageSelector/>
+    <ResetButton />
   </StyledPageContainer>
 );
 
