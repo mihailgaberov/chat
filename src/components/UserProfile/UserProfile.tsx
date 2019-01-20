@@ -1,9 +1,10 @@
 import * as React from 'react';
-
 import StyledUserProfile from './StyledUserProfile';
 
-const UserProfile: React.FunctionComponent = () => (
-  <StyledUserProfile>User profile</StyledUserProfile>
+import {IAppContext, withAppContext} from '../../utilities/AppContext';
+
+const UserProfile = ({appContext}: { appContext: IAppContext }) => (
+  <StyledUserProfile>{appContext.userName}</StyledUserProfile>
 );
 
-export default UserProfile;
+export default withAppContext(UserProfile);

@@ -6,6 +6,7 @@ export interface IAppContext {
         chatTabLabel: string,
         settingsTabLabel: string
     };
+    userName: string;
 }
 
 const context = React.createContext<IAppContext | null>(null);

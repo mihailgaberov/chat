@@ -5,11 +5,11 @@ import * as translationsEN from './translations/translations-en.json';
 import AppRouter from './components/AppRouter';
 
 import {theme, ThemeProvider} from "./theme";
-import {AppContextProvider} from './utilities/AppContext';
+import {AppContextProvider, IAppContext} from './utilities/AppContext';
 
 class App extends React.Component {
   public lang = 'EN';
-  public translations = this.lang && this.lang === 'DE' ? translationsDE : translationsEN;
+  public translations: IAppContext = this.lang && this.lang === 'DE' ? translationsDE : translationsEN;
 
   public state = {
     appTranslations: {
@@ -18,6 +18,7 @@ class App extends React.Component {
         chatTabLabel: this.translations.nav.chatTabLabel,
         settingsTabLabel: this.translations.nav.settingsTabLabel
       },
+      userName: this.translations.userName,
     }
   };
 

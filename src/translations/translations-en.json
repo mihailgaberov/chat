@@ -3,5 +3,6 @@
   "nav": {
     "chatTabLabel": "Chat",
     "settingsTabLabel": "Settings"
-  }
+  },
+  "userName": "User name"
 }
