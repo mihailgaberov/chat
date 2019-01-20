@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ClockModeSelector from '../../ClockModeSelector';
 import ThemeSelector from '../../ThemeSelector';
 import UserProfile from '../../UserProfile';
 
@@ -10,6 +11,7 @@ const SettingsPage = ({appContext}: { appContext: IAppContext }) => (
     <h3>{appContext.nav.settingsTabLabel}</h3>
     <UserProfile/>
     <ThemeSelector/>
+    <ClockModeSelector/>
   </StyledPageContainer>
 );
 
