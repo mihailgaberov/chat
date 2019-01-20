@@ -4,8 +4,8 @@ import * as translationsEN from './translations/translations-en.json';
 
 import AppRouter from './components/AppRouter';
 
-import {theme, ThemeProvider} from "./theme";
-import {AppContextProvider, IAppContext} from './utilities/AppContext';
+import { theme, ThemeProvider } from "./theme";
+import { AppContextProvider, IAppContext } from './utilities/AppContext';
 
 class App extends React.Component {
   public lang = 'EN';
