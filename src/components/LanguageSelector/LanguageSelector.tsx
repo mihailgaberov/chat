@@ -1,13 +1,12 @@
 import * as React from 'react';
 import StyledLanguageSelector from './StyledLanguageSelector';
-import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
+import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 import { IAppContext } from '../../utilities/AppContext';
 
 
 const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  storeToLocalStorage(e.currentTarget.value);
+  storeToLocalStorage('lang', e.currentTarget.value);
 };
-const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced('lang', val);
 
 const LanguageSelector = ({translations}: {translations: IAppContext}) => (
   <StyledLanguageSelector>

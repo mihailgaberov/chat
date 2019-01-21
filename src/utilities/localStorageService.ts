@@ -32,6 +32,7 @@ export const hasStoredItems = (): boolean => localStorage.length > 0;
 // Check for support
 export const isLocalStorageSupported = (): boolean => !!window.localStorage;
 
+// Store (create or update) record to local storage with some delay (e.g. 1500 ms)
 export const storeToLocalStorageDebounced = debounce((key: string, value: string): void => {
   if (isLocalStorageSupported()) {
     if (readRecord(key)) {
@@ -41,3 +42,14 @@ export const storeToLocalStorageDebounced = debounce((key: string, value: string
     }
   }
 }, 1500, {leading: false});
+
+// Store (create or update) record to local storage
+export const storeToLocalStorage = (key: string, value: string): void => {
+  if (isLocalStorageSupported()) {
+    if (readRecord(key)) {
+      updateRecord(key, value);
+    } else {
+      createRecord(key, value);
+    }
+  }
+};
