@@ -37,21 +37,21 @@ class RadioGroup extends React.Component<IRadioGroupProps, {}> {
           <input checked={isChecked}
                  radioGroup={radioGroupName}
                  type='radio'
-                 id='leftRadio'
+                 id={leftRadioLabel}
                  name={radioGroupName}
                  value={leftRadioValue}
                  onChange={this.handleOnChange}/>
-          <label htmlFor='leftRadio'>{leftRadioLabel}</label>
+          <label htmlFor={leftRadioLabel}>{leftRadioLabel}</label>
         </div>
         <div>
           <input checked={!isChecked}
                  type='radio'
                  radioGroup={radioGroupName}
-                 id='rightRadio'
+                 id={rightRadioLabel}
                  name={radioGroupName}
                  value={rightRadioValue}
                  onChange={this.handleOnChange}/>
-          <label htmlFor='rightRadio'>{rightRadioLabel}</label>
+          <label htmlFor={rightRadioLabel}>{rightRadioLabel}</label>
         </div>
       </StyledRadioGroup>
     );
