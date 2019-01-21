@@ -2,9 +2,9 @@ import * as React from 'react';
 import StyledSendingOptions from './StyledSendingOptions';
 import RadioGroup from '../common/RadioGroup';
 import { IAppContext } from '../../utilities/AppContext';
-import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
+import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 
-const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced('ctrlEnterSending', val);
+const handleCallback = (val: string): void => storeToLocalStorage('ctrlEnterSending', val);
 
 const SendingOptions = ({translations}: {translations: IAppContext}) => (
   <StyledSendingOptions>
@@ -15,7 +15,7 @@ const SendingOptions = ({translations}: {translations: IAppContext}) => (
                 leftRadioValue={translations.ctrlEnterSendingOptions.option1}
                 rightRadioLabel={translations.ctrlEnterSendingOptions.option2}
                 rightRadioValue={translations.ctrlEnterSendingOptions.option2}
-                callback={storeToLocalStorage} />
+                callback={handleCallback} />
   </StyledSendingOptions>
 );
 
