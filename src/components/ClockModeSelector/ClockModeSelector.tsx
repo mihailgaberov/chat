@@ -3,9 +3,9 @@ import RadioGroup from '../common/RadioGroup';
 import StyledClockModeSelector from './StyledClockModeSelector';
 
 import { IAppContext } from '../../utilities/AppContext';
-import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
+import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 
-const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced('clockMode', val);
+const handleCallback = (val: string): void => storeToLocalStorage('clockMode', val);
 
 const ClockModeSelector = ({translations}: {translations: IAppContext}) => (
   <StyledClockModeSelector>
@@ -16,7 +16,7 @@ const ClockModeSelector = ({translations}: {translations: IAppContext}) => (
                 leftRadioValue={'12'}
                 rightRadioLabel={translations.clockModes.hours24}
                 rightRadioValue={'24'}
-                callback={storeToLocalStorage} />
+                callback={handleCallback} />
   </StyledClockModeSelector>
 );
 
