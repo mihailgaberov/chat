@@ -19,7 +19,10 @@ class App extends React.Component {
       clockDisplay: this.translations.clockDisplay,
       clockModes: this.translations.clockModes,
       interfaceColor: this.translations.interfaceColor,
-      lang: this.translations.lang,
+      langLabel: this.translations.langLabel,
+      langCode: this.translations.langCode,
+      languageEN: this.translations.languageEN,
+      languageDE: this.translations.languageDE,
       nav: {
         chatTabLabel: this.translations.nav.chatTabLabel,
         settingsTabLabel: this.translations.nav.settingsTabLabel

@@ -9,7 +9,10 @@
     "color2": "Dark DE"
   },
   "interfaceColor": "Interface Color DE",
-  "lang": "DE",
+  "langLabel": "Language",
+  "langCode": "DE",
+  "languageEN": "English",
+  "languageDE": "Deutsch",
   "nav": {
     "chatTabLabel": "Gespräch",
     "settingsTabLabel": "Sprache ändern"

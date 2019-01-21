@@ -11,8 +11,10 @@ export interface IAppContext {
     color2: string;
   };
   interfaceColor: string;
-
-  lang: string;
+  langCode: string;
+  langLabel: string;
+  languageEN: string;
+  languageDE: string;
   nav: {
     chatTabLabel: string,
     settingsTabLabel: string

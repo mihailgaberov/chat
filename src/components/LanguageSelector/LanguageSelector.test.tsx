@@ -1,9 +1,13 @@
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import * as React from 'react';
 import LanguageSelector from './LanguageSelector';
+import translationsMock from '../../translations/translations-mock';
+
+jest.mock('../../utilities/localStorageService');
+
 
 const setup = () => {
-  return shallow(<LanguageSelector />)
+  return shallow(<LanguageSelector translations={translationsMock}/>)
 };
 
 describe('LanguageSelector component', () => {

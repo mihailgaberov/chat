@@ -9,7 +9,10 @@ export default {
     "color2": "Dark"
   },
   "interfaceColor": "Interface Color",
-  "lang": "EN",
+  "langCode": "EN",
+  "langLabel": "Language",
+  "languageEN": "English",
+  "languageDE": "Deutsch",
   "nav": {
     "chatTabLabel": "Chat",
     "settingsTabLabel": "Settings"
