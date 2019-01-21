@@ -27,6 +27,7 @@ class App extends React.Component {
         chatTabLabel: this.translations.nav.chatTabLabel,
         settingsTabLabel: this.translations.nav.settingsTabLabel
       },
+      resetButtonLabel: this.translations.resetButtonLabel,
       userName: this.translations.userName,
     }
   };

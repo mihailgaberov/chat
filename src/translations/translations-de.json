@@ -17,6 +17,7 @@
     "chatTabLabel": "Gespräch",
     "settingsTabLabel": "Sprache ändern"
   },
+  "resetButtonLabel": "Reset DE",
   "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER DE",
   "ctrlEnterSendingOptions": {
     "option1": "On DE",

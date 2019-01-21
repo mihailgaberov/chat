@@ -19,6 +19,7 @@ export interface IAppContext {
     chatTabLabel: string,
     settingsTabLabel: string
   };
+  resetButtonLabel: string;
   userName: string;
   ctrlEnterOptionsTitle: string;
   ctrlEnterSendingOptions: {
