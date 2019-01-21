@@ -1,4 +1,9 @@
 {
+  "clockDisplay": "Clock Display DE",
+  "clockModes": {
+    "hours12": "12 Hours DE",
+    "hours24": "24 Hours DE"
+  },
   "colors": {
     "color1": "Light DE",
     "color2": "Dark DE"

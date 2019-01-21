@@ -1,4 +1,9 @@
 export default {
+  "clockDisplay": "Clock Display DE",
+  "clockModes": {
+    "hours12": "12 Hours",
+    "hours24": "24 Hours"
+  },
   "colors": {
     "color1": "Light",
     "color2": "Dark"

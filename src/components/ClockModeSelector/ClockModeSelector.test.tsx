@@ -1,9 +1,13 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import ClockModeSelector from './ClockModeSelector';
+import translationsMock from '../../translations/translations-mock';
+
+jest.mock('../../utilities/localStorageService');
+
 
 const setup = () => {
-  return shallow(<ClockModeSelector />)
+  return shallow(<ClockModeSelector translations={translationsMock} />)
 };
 
 describe('ClockModeSelector component', () => {

@@ -13,6 +13,8 @@ class App extends React.Component {
 
   public state = {
     appTranslations: {
+      clockDisplay: this.translations.clockDisplay,
+      clockModes: this.translations.clockModes,
       colors: this.translations.colors,
       interfaceColor: this.translations.interfaceColor,
       lang: this.translations.lang,

@@ -14,7 +14,7 @@ const SettingsPage = ({ appContext }: { appContext: IAppContext }) => (
   <StyledPageContainer>
     <UserProfile translations={appContext}/>
     <ThemeSelector translations={appContext}/>
-    <ClockModeSelector/>
+    <ClockModeSelector translations={appContext}/>
     <SendingOptions/>
     <LanguageSelector/>
     <ResetButton/>

@@ -1,6 +1,11 @@
 import * as React from 'react';
 
 export interface IAppContext {
+    clockDisplay: string;
+    clockModes: {
+        hours12: string;
+        hours24: string;
+    }
     lang: string;
     nav: {
         chatTabLabel: string,
