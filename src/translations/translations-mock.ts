@@ -14,5 +14,10 @@ export default {
     "chatTabLabel": "Chat",
     "settingsTabLabel": "Settings"
   },
+  "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER",
+  "ctrlEnterSendingOptions": {
+    "option1": "On",
+    "option2": "Off"
+  },
   "userName": "User name"
 };

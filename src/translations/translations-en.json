@@ -8,11 +8,16 @@
     "color1": "Light",
     "color2": "Dark"
   },
+  "interfaceColor": "Interface Color",
   "lang": "EN",
   "nav": {
     "chatTabLabel": "Chat",
     "settingsTabLabel": "Settings"
   },
-  "userName": "User name",
-  "interfaceColor": "Interface Color"
+  "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER",
+  "ctrlEnterSendingOptions": {
+    "option1": "On",
+    "option2": "Off"
+  },
+  "userName": "User name"
 }

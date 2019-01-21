@@ -8,11 +8,16 @@
     "color1": "Light DE",
     "color2": "Dark DE"
   },
+  "interfaceColor": "Interface Color DE",
   "lang": "DE",
   "nav": {
     "chatTabLabel": "Gespräch",
     "settingsTabLabel": "Sprache ändern"
   },
-  "userName": "User name DE",
-  "interfaceColor": "Interface Color DE"
+  "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER DE",
+  "ctrlEnterSendingOptions": {
+    "option1": "On DE",
+    "option2": "Off DE"
+  },
+  "userName": "User name DE"
 }

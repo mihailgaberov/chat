@@ -13,9 +13,11 @@ class App extends React.Component {
 
   public state = {
     appTranslations: {
+      colors: this.translations.colors,
+      ctrlEnterOptionsTitle: this.translations.ctrlEnterOptionsTitle,
+      ctrlEnterSendingOptions: this.translations.ctrlEnterSendingOptions,
       clockDisplay: this.translations.clockDisplay,
       clockModes: this.translations.clockModes,
-      colors: this.translations.colors,
       interfaceColor: this.translations.interfaceColor,
       lang: this.translations.lang,
       nav: {

@@ -1,7 +1,13 @@
 import styled from '../../theme';
 
 const StyledSendingOptions = styled("div")`
- border: 1px solid gold;
+ padding: 14px;
+ text-align: left;
+ border-bottom: 1px solid ${props => props.theme.quaternaryColor};
+ 
+ label {
+  font-size: 1.2em;
+ }
 `;
 
 export default StyledSendingOptions;
