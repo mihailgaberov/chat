@@ -1,7 +1,12 @@
 import styled from '../../theme';
 
 const StyledThemeSelector = styled("div")`
- border: 1px solid darkorange;
+ padding: 14px;
+ text-align: left;
+ 
+ label {
+  font-size: 1.2em;
+ }
 `;
 
 export default StyledThemeSelector;

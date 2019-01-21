@@ -7,10 +7,10 @@ import { IAppContext } from '../../utilities/AppContext';
 
 const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced('theme', val);
 
-const ThemeSelector = ({ translations }: {translations: IAppContext }) => (
+const ThemeSelector = ({ translations }: { translations: IAppContext }) => (
   <StyledThemeSelector>
-    {translations.interfaceColor}
-  <RadioGroup isLeftChecked={readRecord('theme') === 'light'}
+    <label htmlFor='themeSelector'>{translations.interfaceColor}</label>
+    <RadioGroup isLeftChecked={readRecord('theme') === 'light'}
                 radioGroupName={'themeSelector'}
                 leftRadioLabel={translations.colors.color1}
                 leftRadioValue={translations.colors.color1}
