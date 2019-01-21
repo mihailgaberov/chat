@@ -13,6 +13,8 @@ class App extends React.Component {
 
   public state = {
     appTranslations: {
+      colors: this.translations.colors,
+      interfaceColor: this.translations.interfaceColor,
       lang: this.translations.lang,
       nav: {
         chatTabLabel: this.translations.nav.chatTabLabel,

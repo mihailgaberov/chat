@@ -7,6 +7,11 @@ export interface IAppContext {
         settingsTabLabel: string
     };
     userName: string;
+    interfaceColor: string;
+    colors: {
+        color1: string;
+        color2: string;
+    };
 }
 
 const context = React.createContext<IAppContext | null>(null);

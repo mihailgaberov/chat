@@ -9,13 +9,13 @@ const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced(
 
 const ThemeSelector = ({ translations }: {translations: IAppContext }) => (
   <StyledThemeSelector>
-    Interface color
+    {translations.interfaceColor}
   <RadioGroup isLeftChecked={readRecord('theme') === 'light'}
                 radioGroupName={'themeSelector'}
-                leftRadioLabel={'Light'}
-                leftRadioValue={'light'}
-                rightRadioLabel={'Dark'}
-                rightRadioValue={'dark'}
+                leftRadioLabel={translations.colors.color1}
+                leftRadioValue={translations.colors.color1}
+                rightRadioLabel={translations.colors.color2}
+                rightRadioValue={translations.colors.color2}
                 callback={storeToLocalStorage} />
   </StyledThemeSelector>
 );

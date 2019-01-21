@@ -1,8 +1,13 @@
 {
+  "colors": {
+    "color1": "Light DE",
+    "color2": "Dark DE"
+  },
   "lang": "DE",
   "nav": {
     "chatTabLabel": "Gespräch",
     "settingsTabLabel": "Sprache ändern"
   },
-  "userName": "User name de"
+  "userName": "User name DE",
+  "interfaceColor": "Interface Color DE"
 }
