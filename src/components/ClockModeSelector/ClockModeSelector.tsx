@@ -10,7 +10,7 @@ const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced(
 const ClockModeSelector = ({translations}: {translations: IAppContext}) => (
   <StyledClockModeSelector>
     <label htmlFor='clockMode'>{translations.clockDisplay}</label>
-    <RadioGroup isLeftChecked={readRecord('clockMode') === '12'}
+    <RadioGroup isLeftChecked={readRecord('clockMode') !== '24'}
                 radioGroupName={'clockMode'}
                 leftRadioLabel={translations.clockModes.hours12}
                 leftRadioValue={'12'}
