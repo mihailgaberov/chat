@@ -1,9 +1,12 @@
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import * as React from 'react';
 import ThemeSelector from './ThemeSelector';
+import translationsMock from '../../translations/translations-mock';
+
+jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
-  return shallow(<ThemeSelector />)
+  return shallow(<ThemeSelector translations={translationsMock} />)
 };
 
 describe('ThemeSelector component', () => {

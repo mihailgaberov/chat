@@ -3,10 +3,11 @@ import RadioGroup from '../common/RadioGroup';
 import StyledThemeSelector from './StyledThemeSelector';
 
 import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
+import { IAppContext } from '../../utilities/AppContext';
 
 const storeToLocalStorage = (val: string): void => storeToLocalStorageDebounced('theme', val);
 
-const ThemeSelector: React.FunctionComponent = () => (
+const ThemeSelector = ({ translations }: {translations: IAppContext }) => (
   <StyledThemeSelector>
     Interface color
   <RadioGroup isLeftChecked={readRecord('theme') === 'light'}

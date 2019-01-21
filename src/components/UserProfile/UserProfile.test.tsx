@@ -1,18 +1,12 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import UserProfile from './UserProfile';
+import translationsMock from '../../translations/translations-mock';
 
-const translations = {
-  lang: 'EN',
-  nav: {
-    chatTabLabel: 'Chat',
-    settingsTabLabel: 'Settings'
-  },
-  userName: 'Test User'
-};
+jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
-  return shallow(<UserProfile translations={translations}/>)
+  return shallow(<UserProfile translations={translationsMock}/>)
 };
 
 describe('UserProfile component', () => {
