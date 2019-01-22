@@ -9,10 +9,11 @@ import StyledPageContainer from '../StyledPageContainer';
 import { withTranslations } from '../../../utilities/withTranslations';
 import { IAppContext } from '../../../utilities/TranslationsProvider';
 
-const SettingsPage = ({ appContext, changeLanguage }: { appContext: IAppContext, changeLanguage: () => void }) => (
+const SettingsPage = ({ appContext, changeLanguage, changeTheme }:
+                        { appContext: IAppContext, changeLanguage: () => void, changeTheme: () => void }) => (
   <StyledPageContainer>
     <UserProfile translations={appContext}/>
-    <ThemeSelector translations={appContext}/>
+    <ThemeSelector translations={appContext} changeTheme={changeTheme}/>
     <ClockModeSelector translations={appContext}/>
     <SendingOptions translations={appContext}/>
     <LanguageSelector translations={appContext} changeLanguage={changeLanguage}/>

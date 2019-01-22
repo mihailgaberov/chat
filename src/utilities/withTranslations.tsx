@@ -10,6 +10,7 @@ export const withTranslations = (WrappedComponent: React.ComponentClass | React.
           {...this.props as any}
           appContext={value.state.translations}
           changeLanguage={value.changeLanguage}
+          changeTheme={value.changeTheme}
         />}
       </AppContextConsumer>;
     }

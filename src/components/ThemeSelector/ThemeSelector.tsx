@@ -4,19 +4,27 @@ import StyledThemeSelector from './StyledThemeSelector';
 import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 import {IAppContext } from '../../utilities/TranslationsProvider';
 
-const handleCallback = (val: string): void => storeToLocalStorage('theme', val);
+class ThemeSelector extends React.Component<{ translations: IAppContext, changeTheme: () => void}> {
+  public render() {
+    const { translations } = this.props;
+    return (
+      <StyledThemeSelector>
+        <label htmlFor='themeSelector'>{translations.interfaceColor}</label>
+        <RadioGroup isLeftChecked={readRecord('theme') !== 'Dark'}
+                    radioGroupName={'themeSelector'}
+                    leftRadioLabel={translations.colors.color1}
+                    leftRadioValue={'light'}
+                    rightRadioLabel={translations.colors.color2}
+                    rightRadioValue={'dark'}
+                    callback={this.handleCallback}/>
+      </StyledThemeSelector>
+    );
+  }
 
-const ThemeSelector = ({ translations }: { translations: IAppContext }) => (
-  <StyledThemeSelector>
-    <label htmlFor='themeSelector'>{translations.interfaceColor}</label>
-    <RadioGroup isLeftChecked={readRecord('theme') !== 'Dark'}
-                radioGroupName={'themeSelector'}
-                leftRadioLabel={translations.colors.color1}
-                leftRadioValue={'light'}
-                rightRadioLabel={translations.colors.color2}
-                rightRadioValue={'dark'}
-                callback={handleCallback} />
-  </StyledThemeSelector>
-);
+  private handleCallback = (val: string): void => {
+    storeToLocalStorage('theme', val);
+    this.props.changeTheme();
+  };
+}
 
 export default ThemeSelector;

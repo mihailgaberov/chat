@@ -6,7 +6,7 @@ import translationsMock from '../../translations/translations-mock';
 jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
-  return shallow(<ThemeSelector translations={translationsMock} />)
+  return shallow(<ThemeSelector translations={translationsMock} changeTheme={jest.fn()}/>)
 };
 
 describe('ThemeSelector component', () => {
