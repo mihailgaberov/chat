@@ -10,8 +10,8 @@ const StyledResetButton = styled("div")`
     line-height: 28px;
     font-size: 1.1em;
     padding: 7px;
-    color: ${(props) => props.theme.primaryColor};
-    background-color: ${(props) => props.theme.tertiaryColor};
+    color: ${(props) => props.theme.primaryLightColor};
+    background-color: ${(props) => props.theme.secondaryDarkColor};
   }
 `;
 

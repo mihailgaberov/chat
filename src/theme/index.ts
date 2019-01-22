@@ -10,24 +10,24 @@ const {
   >;
 
 export interface IThemeInterface {
-  primaryColor: string;
-  secondaryColor: string;
-  tertiaryColor: string;
-  quaternaryColor: string;
+  primaryLightColor: string;
+  secondaryLightColor: string;
+  primaryDarkColor: string;
+  secondaryDarkColor: string;
 }
 
 export const darkTheme = {
-  primaryColor: "#e9e9eb",
-  quaternaryColor: "#1e5266",
-  secondaryColor: "#333",
-  tertiaryColor: "#111",
+  primaryLightColor: "#e9e9eb",
+  secondaryLightColor: "#333",
+  primaryDarkColor: "#1e5266",
+  secondaryDarkColor: "#111",
 };
 
 export const lightTheme = {
-  primaryColor: "#e9e9eb",
-  quaternaryColor: "#93abe1",
-  secondaryColor: "#e1851b",
-  tertiaryColor: "#801a08",
+  primaryLightColor: "#e9e9eb",
+  primaryDarkColor: "#cc37fb",
+  secondaryDarkColor: "#e10ec2",
+  secondaryLightColor: "#93abe1",
 };
 
 export default styled;

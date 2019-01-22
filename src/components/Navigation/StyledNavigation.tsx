@@ -11,23 +11,23 @@ const StyledNavigation = styled("ul")`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.secondaryLightColor};
   
   li {
     width: 100%;
     a {
       display: block;
-      color: ${props => props.theme.primaryColor};
+      color: ${props => props.theme.primaryLightColor};
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
         
       &:hover {
-        background-color: ${props => props.theme.tertiaryColor};
+        background-color: ${props => props.theme.secondaryDarkColor};
       }
       
       &.active {
-        background-color: ${props => props.theme.tertiaryColor};
+        background-color: ${props => props.theme.secondaryDarkColor};
         border-bottom: 3px solid #ccc;
       }
       
@@ -43,10 +43,10 @@ const StyledNavigation = styled("ul")`
     
     @keyframes pulse {
       0% {
-        background-color: ${props => props.theme.secondaryColor};
+        background-color: ${props => props.theme.secondaryLightColor};
       }
       100% {
-        background-color: ${props => props.theme.quaternaryColor};
+        background-color: ${props => props.theme.primaryDarkColor};
       }
     }
     
