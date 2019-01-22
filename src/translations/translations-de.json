@@ -1,15 +1,15 @@
 {
-  "clockDisplay": "Clock Display DE",
+  "clockDisplay": "Uhrenanzeige",
   "clockModes": {
-    "hours12": "12 Hours DE",
-    "hours24": "24 Hours DE"
+    "hours12": "12 Stunden",
+    "hours24": "24 Stunden"
   },
   "colors": {
-    "color1": "Light DE",
-    "color2": "Dark DE"
+    "color1": "Licht",
+    "color2": "Dunkel"
   },
-  "interfaceColor": "Interface Color DE",
-  "langLabel": "Language",
+  "interfaceColor": "Schnittstellenfarbe",
+  "langLabel": "Sprache",
   "langCode": "DE",
   "languageEN": "English",
   "languageDE": "Deutsch",
@@ -17,11 +17,11 @@
     "chatTabLabel": "Gespräch",
     "settingsTabLabel": "Sprache ändern"
   },
-  "resetButtonLabel": "Reset DE",
-  "ctrlEnterOptionsTitle": "Send messages on CTRL+ENTER DE",
+  "resetButtonLabel": "Zurücksetzen",
+  "ctrlEnterOptionsTitle": "Senden Sie Nachrichten mit STRG + EINGABE",
   "ctrlEnterSendingOptions": {
-    "option1": "On DE",
-    "option2": "Off DE"
+    "option1": "Ein",
+    "option2": "Aus"
   },
-  "userName": "User name DE"
+  "userName": "Nutzername"
 }
