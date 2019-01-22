@@ -25,9 +25,9 @@ export const darkTheme = {
 
 export const lightTheme = {
   primaryLightColor: '#e9e9eb',
-  primaryDarkColor: '#cc37fb',
-  secondaryDarkColor: '#b80fee',
-  secondaryLightColor: '#93abe1',
+  secondaryLightColor: '#ed7a7a',
+  primaryDarkColor: '#da0000',
+  secondaryDarkColor: '#7b0000',
 };
 
 export default styled;

@@ -1,7 +1,8 @@
 import styled from '../../theme';
 
 const StyledChatArea = styled("section")`
-  border: 1px solid red;
+  color: ${(props) => props.theme.primaryLightColor};
+  background-color: ${(props) => props.theme.secondaryDarkColor};
 `;
 
 export default StyledChatArea;
