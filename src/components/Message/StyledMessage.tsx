@@ -8,7 +8,6 @@ const StyledMessage = styled("div")<{ type: string }>`
   padding: 14px;
   margin: 14px;
   display: block;
-  
   clear: both; 
 `;
 
