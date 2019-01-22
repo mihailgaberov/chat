@@ -12,9 +12,9 @@ const ThemeSelector = ({ translations }: { translations: IAppContext }) => (
     <RadioGroup isLeftChecked={readRecord('theme') !== 'Dark'}
                 radioGroupName={'themeSelector'}
                 leftRadioLabel={translations.colors.color1}
-                leftRadioValue={translations.colors.color1}
+                leftRadioValue={'light'}
                 rightRadioLabel={translations.colors.color2}
-                rightRadioValue={translations.colors.color2}
+                rightRadioValue={'dark'}
                 callback={handleCallback} />
   </StyledThemeSelector>
 );
