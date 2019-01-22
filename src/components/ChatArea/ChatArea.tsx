@@ -4,9 +4,8 @@ import Message from '../Message';
 
 const ChatArea = () => (
   <StyledChatArea>
-    Chat area
-    <Message type={'sent'}/>
-    <Message type={'received'}/>
+    <Message type={'sent'} value={'Hi, asl pls?'}/>
+    <Message type={'received'} value={'Hi, Doroteya. 21/f/sf'}/>
   </StyledChatArea>
 );
 

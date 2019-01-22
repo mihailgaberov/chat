@@ -14,6 +14,7 @@ export interface IThemeInterface {
   secondaryLightColor: string;
   primaryDarkColor: string;
   secondaryDarkColor: string;
+  messageBackgroundColor: string;
 }
 
 export const darkTheme = {
@@ -21,6 +22,7 @@ export const darkTheme = {
   secondaryLightColor: '#777',
   primaryDarkColor: '#1e5266',
   secondaryDarkColor: '#111',
+  messageBackgroundColor: '#3d3c3c',
 };
 
 export const lightTheme = {
@@ -28,6 +30,7 @@ export const lightTheme = {
   secondaryLightColor: '#ed7a7a',
   primaryDarkColor: '#da0000',
   secondaryDarkColor: '#7b0000',
+  messageBackgroundColor: '#3b1111',
 };
 
 export default styled;

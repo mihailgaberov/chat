@@ -1,10 +1,9 @@
 import * as React from 'react';
 import StyledMessage from './StyledMessage';
 
-const Message = ({type}: {type: string}) => (
-  <StyledMessage>
-    {type === 'sent' && 'Message sent'}
-    {type === 'received' && 'Message received'}
+const Message = ({type, value}: {type: string, value: string}) => (
+  <StyledMessage type={type}>
+    {value}
   </StyledMessage>
 );
 

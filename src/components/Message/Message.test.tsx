@@ -3,7 +3,7 @@ import * as React from 'react';
 import Message from './Message';
 
 const setup = () => {
-  return shallow(<Message type={'sent'}/>)
+  return shallow(<Message type={'sent'} value={'Hi'}/>)
 };
 
 describe('Message component', () => {
