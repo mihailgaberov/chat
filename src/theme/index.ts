@@ -1,4 +1,4 @@
-import * as styledComponents from "styled-components";
+import * as styledComponents from 'styled-components';
 
 const {
   default: styled,
@@ -17,17 +17,17 @@ export interface IThemeInterface {
 }
 
 export const darkTheme = {
-  primaryLightColor: "#e9e9eb",
-  secondaryLightColor: "#777",
-  primaryDarkColor: "#1e5266",
-  secondaryDarkColor: "#111",
+  primaryLightColor: '#e9e9eb',
+  secondaryLightColor: '#777',
+  primaryDarkColor: '#1e5266',
+  secondaryDarkColor: '#111',
 };
 
 export const lightTheme = {
-  primaryLightColor: "#e9e9eb",
-  primaryDarkColor: "#cc37fb",
-  secondaryDarkColor: "#b80fee",
-  secondaryLightColor: "#93abe1",
+  primaryLightColor: '#e9e9eb',
+  primaryDarkColor: '#cc37fb',
+  secondaryDarkColor: '#b80fee',
+  secondaryLightColor: '#93abe1',
 };
 
 export default styled;
