@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as translationsDE from '../translations/translations-de.json';
 import * as translationsEN from '../translations/translations-en.json';
+import { readRecord } from './localStorageService';
 
 export interface IAppContext {
   clockDisplay: string;
@@ -38,7 +39,7 @@ export const AppContextConsumer = context.Consumer;
 
 export default class TranslationProvider extends React.Component {
   public state = {
-    translations: translationsEN
+    translations: readRecord('lang') !== 'de' ? translationsEN : translationsDE
   };
 
   public render() {
@@ -53,7 +54,6 @@ export default class TranslationProvider extends React.Component {
   }
 
   private changeLanguage = () => {
-    console.log('>>> change lang called');
     this.setState({
       translations: this.state.translations.langCode === 'DE' ? translationsEN : translationsDE
     });
