@@ -10,7 +10,7 @@ class ThemeSelector extends React.Component<{ translations: IAppContext, changeT
     return (
       <StyledThemeSelector>
         <label htmlFor='themeSelector'>{translations.interfaceColor}</label>
-        <RadioGroup isLeftChecked={readRecord('theme') !== 'Dark'}
+        <RadioGroup isLeftChecked={readRecord('theme') !== 'dark'}
                     radioGroupName={'themeSelector'}
                     leftRadioLabel={translations.colors.color1}
                     leftRadioValue={'light'}
