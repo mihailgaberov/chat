@@ -9,6 +9,7 @@ const StyledUserProfile = styled("div")`
  }
  
  input {
+  color: ${props => props.theme.primaryDarkColor};
   width: 100%;
   line-height: 28px;
   margin-top: 7px;
