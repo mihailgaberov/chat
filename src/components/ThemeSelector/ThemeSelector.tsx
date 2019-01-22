@@ -1,9 +1,8 @@
 import * as React from 'react';
 import RadioGroup from '../common/RadioGroup';
 import StyledThemeSelector from './StyledThemeSelector';
-
 import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
-import { IAppContext } from '../../utilities/AppContext';
+import {IAppContext } from '../../utilities/TranslationsProvider';
 
 const handleCallback = (val: string): void => storeToLocalStorage('theme', val);
 

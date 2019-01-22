@@ -2,7 +2,7 @@ import * as React from 'react';
 import RadioGroup from '../common/RadioGroup';
 import StyledClockModeSelector from './StyledClockModeSelector';
 
-import { IAppContext } from '../../utilities/AppContext';
+import {IAppContext } from '../../utilities/TranslationsProvider';
 import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 
 const handleCallback = (val: string): void => storeToLocalStorage('clockMode', val);

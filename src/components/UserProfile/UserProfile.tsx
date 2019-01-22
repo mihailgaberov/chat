@@ -1,7 +1,6 @@
 import * as React from 'react';
 import StyledUserProfile from './StyledUserProfile';
-
-import { IAppContext } from '../../utilities/AppContext';
+import {IAppContext } from '../../utilities/TranslationsProvider';
 import { readRecord, storeToLocalStorageDebounced } from '../../utilities/localStorageService';
 
 interface IUserProfileState {

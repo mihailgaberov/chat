@@ -7,7 +7,7 @@ jest.mock('../../utilities/localStorageService');
 
 
 const setup = () => {
-  return shallow(<LanguageSelector translations={translationsMock}/>)
+  return shallow(<LanguageSelector translations={translationsMock} changeLanguage={jest.fn()}/>)
 };
 
 describe('LanguageSelector component', () => {

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {IAppContext, withAppContext} from '../../../utilities/AppContext';
+import { withTranslations } from '../../../utilities/withTranslations';
+import { IAppContext } from '../../../utilities/TranslationsProvider';
 import StyledPageContainer from '../StyledPageContainer';
 
 const ChatPage = ({appContext}: { appContext: IAppContext }) =>
@@ -9,4 +10,4 @@ const ChatPage = ({appContext}: { appContext: IAppContext }) =>
     </StyledPageContainer>
   );
 
-export default withAppContext(ChatPage as React.FunctionComponent);
+export default withTranslations(ChatPage as React.FunctionComponent);

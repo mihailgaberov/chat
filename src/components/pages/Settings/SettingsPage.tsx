@@ -4,21 +4,20 @@ import LanguageSelector from '../../LanguageSelector';
 import ResetButton from '../../ResetButton';
 import ThemeSelector from '../../ThemeSelector';
 import SendingOptions from '../../SendingOptions';
-
 import UserProfile from '../../UserProfile';
 import StyledPageContainer from '../StyledPageContainer';
+import { withTranslations } from '../../../utilities/withTranslations';
+import { IAppContext } from '../../../utilities/TranslationsProvider';
 
-import { IAppContext, withAppContext } from '../../../utilities/AppContext';
-
-const SettingsPage = ({ appContext }: { appContext: IAppContext }) => (
+const SettingsPage = ({ appContext, changeLanguage }: { appContext: IAppContext, changeLanguage: () => void }) => (
   <StyledPageContainer>
     <UserProfile translations={appContext}/>
     <ThemeSelector translations={appContext}/>
     <ClockModeSelector translations={appContext}/>
     <SendingOptions translations={appContext}/>
-    <LanguageSelector translations={appContext}/>
+    <LanguageSelector translations={appContext} changeLanguage={changeLanguage}/>
     <ResetButton translations={appContext}/>
   </StyledPageContainer>
 );
 
-export default withAppContext(SettingsPage);
+export default withTranslations(SettingsPage as React.FunctionComponent);

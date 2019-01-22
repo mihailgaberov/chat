@@ -1,4 +1,5 @@
 export default {
+  "changeLanguage": ()=>{"void"},
   "clockDisplay": "Clock Display DE",
   "clockModes": {
     "hours12": "12 Hours",

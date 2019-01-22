@@ -1,13 +1,12 @@
 import * as React from 'react';
-import * as translationsDE from './translations/translations-de.json';
-import * as translationsEN from './translations/translations-en.json';
 
 import AppRouter from './components/AppRouter';
 
 import { theme, ThemeProvider } from "./theme";
-import { AppContextProvider, IAppContext } from './utilities/AppContext';
+import TranslationProvider from './utilities/TranslationsProvider'
 
 class App extends React.Component {
+/*
   public lang = 'EN';
   public translations: IAppContext = this.lang && this.lang === 'DE' ? translationsDE : translationsEN;
 
@@ -31,12 +30,13 @@ class App extends React.Component {
       userName: this.translations.userName,
     }
   };
+*/
 
   public render() {
     return <ThemeProvider theme={theme}>
-      <AppContextProvider value={this.state.appTranslations}>
+      <TranslationProvider>
         <AppRouter/>
-      </AppContextProvider>
+      </TranslationProvider >
     </ThemeProvider>
   }
 }

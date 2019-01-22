@@ -1,7 +1,7 @@
 import * as React from 'react';
 import StyledResetButton from './StyledResetButton';
 import { clearAll } from '../../utilities/localStorageService';
-import { IAppContext } from '../../utilities/AppContext';
+import {IAppContext } from '../../utilities/TranslationsProvider';
 
 const resetSettings = () => clearAll();
 

@@ -4,7 +4,7 @@ import StyledNavigation from './StyledNavigation';
 import {faCog, faComment} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
-import {withAppContext} from '../../utilities/AppContext';
+import {withTranslations} from '../../utilities/withTranslations';
 import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
 
 interface INavProps {
@@ -66,4 +66,4 @@ class Navigation extends React.Component<INavProps, INavState> {
   };*/
 }
 
-export default withAppContext(Navigation as React.ComponentClass);
+export default withTranslations(Navigation as React.ComponentClass);

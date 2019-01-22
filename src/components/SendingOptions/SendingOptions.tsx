@@ -1,7 +1,7 @@
 import * as React from 'react';
 import StyledSendingOptions from './StyledSendingOptions';
 import RadioGroup from '../common/RadioGroup';
-import { IAppContext } from '../../utilities/AppContext';
+import {IAppContext } from '../../utilities/TranslationsProvider';
 import { readRecord, storeToLocalStorage } from '../../utilities/localStorageService';
 
 const handleCallback = (val: string): void => storeToLocalStorage('ctrlEnterSending', val);

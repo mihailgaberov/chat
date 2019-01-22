@@ -5,7 +5,6 @@ import translationsMock from '../../translations/translations-mock';
 
 jest.mock('../../utilities/localStorageService');
 
-
 const setup = () => {
   return shallow(<ClockModeSelector translations={translationsMock} />)
 };
