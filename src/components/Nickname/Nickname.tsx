@@ -4,7 +4,7 @@ import StyledNickname from './StyledNickname';
 
 const Nickname = () => (
   <StyledNickname>
-    guest0001
+    guest0001, 10:02
   </StyledNickname>
 );
 
