@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import MessageSender from './MessageSender';
+import Nickname from './Nickname';
 
 const setup = () => {
-  return shallow(<MessageSender />)
+  return shallow(<Nickname />)
 };
 
-describe('MessageSender component', () => {
+describe('Nickname component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
