@@ -41,7 +41,7 @@ export const AppContextConsumer = context.Consumer;
 export default class TranslationProvider extends React.Component {
   public state = {
     translations: readRecord('lang') !== 'de' ? translationsEN : translationsDE,
-    colorTheme: readRecord('theme') !== 'light' ? darkTheme : lightTheme
+    colorTheme: readRecord('theme') !== 'dark' ? lightTheme : darkTheme
   };
 
   public render() {
