@@ -9,7 +9,7 @@ import { readRecord } from '../../utilities/localStorageService';
 import { getTime12Hours, getTime24hours } from '../../utilities/common';
 
 interface IMessageSenderDispatchProps {
-  sendMessage: (message: {from: string, content: string}) => void;
+  sendMessage: (message: {from: string, content: string, time: string}) => void;
 }
 
 export class MessageSender extends React.Component {

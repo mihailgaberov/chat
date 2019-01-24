@@ -8,7 +8,7 @@ const socketMiddleware = (store: any) => {
     store.dispatch(connectionChanged(isConnected));
   };
 
-  const onIncomingMessage = (message: {from: string, content: string}) => store.dispatch(messageReceived(message));
+  const onIncomingMessage = (message: { from: string, content: string, time: string }) => store.dispatch(messageReceived(message));
 
   const socket = new Socket(onConnectionChange, onIncomingMessage);
 
