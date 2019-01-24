@@ -1,5 +1,5 @@
-export const CONNECTION_CHANGED = 'socket/connection-changed';
-export const CONNECT_SOCKET = 'socket/connect';
+export const CONNECTION_CHANGED = 'CONNECTION_CHANGED';
+export const CONNECT_SOCKET = 'CONNECT_SOCKET';
 
 export const connectionChanged = (isConnected: boolean) => {
   return {

@@ -1,17 +1,17 @@
-export const MESSAGE_RECEIVED = 'message/message-received';
-export const MESSAGE_SENT = 'message/message-sent';
-export const SEND_MESSAGE = 'message/send-message';
+export const SEND_MESSAGE_RESPONSE = 'SEND_MESSAGE_RESPONSE';
+export const MESSAGE_SENT = 'MESSAGE_SENT';
+export const SEND_MESSAGE_REQUEST = 'SEND_MESSAGE_REQUEST';
 
 export const messageReceived = (message: {from: string, content: string}) => {
   return {
-    type: MESSAGE_RECEIVED,
+    type: SEND_MESSAGE_RESPONSE,
     message
   };
 };
 
 export const sendMessage = (message: {from: string, content: string}) => {
   return {
-    type: SEND_MESSAGE,
+    type: SEND_MESSAGE_REQUEST,
     message
   };
 };

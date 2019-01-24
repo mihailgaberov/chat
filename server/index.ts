@@ -6,13 +6,14 @@ io.on('connect', (socket: any) => {
   // Say Hi to all connected clients
   io.emit('broadcast', '[Server]: Welcome stranger!');
 
-  socket.on('chat message', (msg: { message: string}) => {
-    console.log(`message: ${msg.message}`);
-    io.emit('chat message', msg);
+  socket.on('message', (msg: { from: string, content: string }) => {
+    console.log(`message received from user: ${msg.from}`);
+    console.log(`message received content: ${msg.content}`);
+    io.emit('message', msg);
   });
 
   // Say Bye to all connected clients
-  socket.on('disconnect', function(){
+  socket.on('disconnect', function () {
     io.emit('broadcast', '[Server]: Bye, bye, stranger!');
   });
 });
