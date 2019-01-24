@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 function messageReducer(state = INITIAL_STATE, action: {type: string, message: { from: string, content: string}}) {
   switch (action.type) {
     case SEND_MESSAGE_RESPONSE:
-      console.log('>>> message received reducer: ', action);
       return {
         ...state,
         messages: [...state.messages, action.message]
