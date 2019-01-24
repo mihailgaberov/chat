@@ -3,7 +3,7 @@ import * as React from 'react';
 import Timestamp from './Timestamp';
 
 const setup = () => {
-  return shallow(<Timestamp value={'10:03'}/>)
+  return shallow(<Timestamp value={'10:03'} floatToRight={true}/>)
 };
 
 describe('Timestamp component', () => {

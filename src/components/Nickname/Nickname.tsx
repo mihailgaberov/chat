@@ -1,9 +1,9 @@
 import * as React from 'react';
 import StyledNickname from './StyledNickname';
 
-const Nickname = ({value}: {value: string}) => (
+const Nickname = ({value, shouldRender}: {value: string, shouldRender: boolean}) => (
   <StyledNickname>
-    {value},
+    {shouldRender ? `${value},` : ''}
   </StyledNickname>
 );
 

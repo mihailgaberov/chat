@@ -3,7 +3,7 @@ import * as React from 'react';
 import Nickname from './Nickname';
 
 const setup = () => {
-  return shallow(<Nickname value={'guest0001'}/>)
+  return shallow(<Nickname value={'guest0001'} shouldRender={true}/>)
 };
 
 describe('Nickname component', () => {
