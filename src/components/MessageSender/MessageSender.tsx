@@ -5,13 +5,15 @@ import { sendMessage } from '../../store/message/actions';
 import StyledMessageSender from './StyledMessageSender';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { readRecord } from '../../utilities/localStorageService';
 
 interface IMessageSenderDispatchProps {
-  sendMessage: () => void;
+  sendMessage: (message: {from: string, content: string}) => void;
 }
 
 export class MessageSender extends React.Component {
   public state = {
+    username: readRecord('username') || 'guest0001',
     chatMessage: ''
   };
 
@@ -33,13 +35,14 @@ export class MessageSender extends React.Component {
   };
 
   private handleClick = () => {
+    const { username, chatMessage } = this.state;
     // @ts-ignore
-    this.props.sendMessage({ from: 'Mihail', content: 'asd asd' });
+    this.props.sendMessage({ from: username, content: chatMessage });
   };
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<any>): IMessageSenderDispatchProps => ({
-  sendMessage: () => dispatch(sendMessage({from: 'Mihail', content: 'test message'})),
+  sendMessage: (message: { from: string, content: string}) => dispatch(sendMessage(message)),
 });
 
 export default connect(null, mapDispatchToProps)(MessageSender);
