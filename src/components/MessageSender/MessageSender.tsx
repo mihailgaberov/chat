@@ -37,8 +37,10 @@ export class MessageSender extends React.Component {
 
   private handleClick = () => {
     const { username, chatMessage } = this.state;
+    if (chatMessage !== '') {
     // @ts-ignore
     this.props.sendMessage({ from: username, content: chatMessage, time: this.getTime() });
+    }
   };
 
   private getTime = (): string => {
