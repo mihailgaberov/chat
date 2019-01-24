@@ -1,23 +1,44 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
 import Nickname from '../Nickname';
+import Timestamp from '../Timestamp';
 
-const ChatArea = () => (
-  <StyledChatArea>
-    <Nickname/>
-    <Message type={'received'} value={'Want to bang tonight?'}/>
-    <Nickname/>
-    <Message type={'received'} value={'I meant hang.'}/>
-    <Nickname/>
-    <Message type={'received'} value={'Duck, auto-cucumber.'}/>
-    <Message type={'sent'} value={'What?'}/>
-    <Nickname/>
-    <Message type={'received'} value={'God donut.'}/>
-    <Nickname/>
-    <Message type={'received'} value={'How the duck do I turn this off?'}/>
-    <Message type={'sent'} value={':))))'}/>
-  </StyledChatArea>
-);
+interface IChatAreaStare {
+  messageState: {
+    messages: []
+  }
+}
 
-export default ChatArea;
+class ChatArea extends React.Component {
+  public render() {
+    // @ts-ignore
+    // const { messages } = this.props;
+    const { messages } = {messages: [{from: 'Mihail', content: 'Hoi'},
+        {from: 'Mihail', content: 'Do you want to bang tonight?'}]};
+    console.log('>>> messages: ', messages);
+
+    return (
+      <StyledChatArea>
+        {messages.map((element: { from: string, content: string}, idx: number) => {
+          return (
+            <React.Fragment key={idx}>
+              <div id='nickname-container'>
+                <Nickname value={element.from}/>
+                <Timestamp value={'10:30'}/>
+              </div>
+              <Message type={'received'} value={element.content}/>
+            </React.Fragment>
+          )
+        })}
+      </StyledChatArea>
+    );
+  }
+}
+
+const mapStateToProps = (state: IChatAreaStare) => ({
+  messages: state.messageState.messages
+});
+
+export default connect(mapStateToProps)(ChatArea);

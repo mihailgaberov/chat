@@ -1,10 +1,9 @@
 import * as React from 'react';
 import StyledNickname from './StyledNickname';
 
-
-const Nickname = () => (
+const Nickname = ({value}: {value: string}) => (
   <StyledNickname>
-    guest0001, 10:02
+    {value},
   </StyledNickname>
 );
 

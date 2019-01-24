@@ -1,12 +1,12 @@
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import * as React from 'react';
-import Nickname from './Nickname';
+import Timestamp from './Timestamp';
 
 const setup = () => {
-  return shallow(<Nickname value={'guest0001'}/>)
+  return shallow(<Timestamp value={'10:03'}/>)
 };
 
-describe('Nickname component', () => {
+describe('Timestamp component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
