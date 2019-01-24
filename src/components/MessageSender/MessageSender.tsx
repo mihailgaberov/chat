@@ -1,9 +1,14 @@
 import * as React from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { sendMessage } from '../../store/message/actions';
 import StyledMessageSender from './StyledMessageSender';
-import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+interface IMessageSenderDispatchProps {
+  sendMessage: () => void;
+}
 
 export class MessageSender extends React.Component {
   public state = {
@@ -27,15 +32,14 @@ export class MessageSender extends React.Component {
     this.setState({ chatMessage: e.currentTarget.value });
   };
 
-  private handleClick =() => {
-    console.log('>>> click');
-    sendMessage({from: 'Mihail', content: this.state.chatMessage})
+  private handleClick = () => {
+    // @ts-ignore
+    this.props.sendMessage({ from: 'Mihail', content: 'asd asd' });
   };
 }
 
-
-const mapDispatchToProps = (dispatch: any) => ({
-  sendMessage: (message: {from: string, content: string}) => dispatch(sendMessage(message))
+const mapDispatchToProps = (dispatch: Dispatch<any>): IMessageSenderDispatchProps => ({
+  sendMessage: () => dispatch(sendMessage({from: 'Mihail', content: 'test message'})),
 });
 
 export default connect(null, mapDispatchToProps)(MessageSender);

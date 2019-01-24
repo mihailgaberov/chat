@@ -36,7 +36,13 @@ export default class Socket {
     this.onChange(true);
   };
 
-  public sendMessage = (message: { from: string, content: string }) => this.socket.emit(EVENTS.MESSAGE, message);
+  public sendMessage = (message: { from: string, content: string }) => {
+    if (typeof this.socket.emit === 'function') {
+      this.socket.emit(EVENTS.MESSAGE, message)
+    } else {
+      console.error('Cannot emit socket messages. Socket.io not connected.');
+    }
+  };
 
   public disconnect = () => this.socket.close();
 }
