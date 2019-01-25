@@ -1,13 +1,21 @@
 import * as React from 'react';
+import { Dispatch } from 'redux';
+import { connect } from 'react-redux';
+import { connectSocket } from 'src/store/socket/actions';
 import StyledNavigation from './StyledNavigation';
-import {faCog, faComment} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {NavLink} from 'react-router-dom';
-import {withTranslations} from '../../utilities/withTranslations';
+import { faCog, faComment } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from 'react-router-dom';
+import { withTranslations } from '../../utilities/withTranslations';
 import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
+import { IAppContext } from '../../utilities/TranslationsProvider';
+
+interface INavDispatchProps {
+  connectToSockets: () => void;
+}
 
 interface INavProps {
-  appContext: {};
+  appContext: IAppContext;
 }
 
 interface INavState {
@@ -24,12 +32,13 @@ class Navigation extends React.Component<INavProps, INavState> {
   }
 
   public componentDidMount(): void {
-    // TODO: Temporary here for testing -> tab will startBlinking when new message is received
-    // setTimeout(this.startBlinking, 2000);
+
+    // @ts-ignore
+    this.props.connectToSockets();
   }
 
   public render() {
-    const {appContext} = this.props;
+    const { appContext } = this.props;
     const { shouldBlink } = this.state;
 
     return appContext && (
@@ -39,30 +48,35 @@ class Navigation extends React.Component<INavProps, INavState> {
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
             <UnreadMessagesCounter count={13}/>
-            <span>Chat</span>
+            <span>{appContext.nav.chatTabLabel}</span>
           </NavLink>
         </li>
         <li>
           <NavLink activeClassName='active' to='/settings'>
             <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
-            <span>Settings</span>
+            <span>{appContext.nav.settingsTabLabel}</span>
           </NavLink>
         </li>
       </StyledNavigation>
     );
   }
 
-  /*private startBlinking = (): void => {
+ /* private startBlinking = (): void => {
     this.setState({
       shouldBlink: true
     });
-  };*/
+  };
 
-  /*private stopBlinking = (): void => {
+  private stopBlinking = (): void => {
     this.setState({
       shouldBlink: false
     });
   };*/
 }
 
-export default withTranslations(Navigation as React.ComponentClass);
+
+const mapDispatchToProps = (dispatch: Dispatch<any>): INavDispatchProps => ({
+  connectToSockets: () => dispatch(connectSocket())
+});
+
+export default withTranslations(connect(null, mapDispatchToProps)(Navigation));
