@@ -14,8 +14,8 @@
   "languageEN": "English",
   "languageDE": "Deutsch",
   "nav": {
-    "chatTabLabel": "Gespräch",
-    "settingsTabLabel": "Einstellungen"
+    "chatTabLabel": "Plausch",
+    "settingsTabLabel": "Rahmen"
   },
   "resetButtonLabel": "Zurücksetzen",
   "ctrlEnterOptionsTitle": "Senden Sie Nachrichten mit STRG + EINGABE",
