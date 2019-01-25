@@ -3,7 +3,14 @@ import StyledMessage from './StyledMessage';
 import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
 
-const Message = ({message}: {message: { from: string, content: string, time: string, type: string}}) => (
+export interface IMessage {
+  from: string;
+  content: string;
+  time: string;
+  type: string;
+}
+
+const Message = ({message}: {message: IMessage}) => (
   <React.Fragment>
       <div id='nickname-container'>
           <Nickname value={message.from} shouldRender={message.type === 'received'}/>

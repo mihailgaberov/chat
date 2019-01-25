@@ -10,7 +10,7 @@ class UnreadMessagesCounter extends React.Component<IUnreadMessagesCounterProps>
     const {count} = this.props;
 
     return (
-      count && <StyledUnreadMessagesCounter>
+      count > 0 && <StyledUnreadMessagesCounter>
         {count}
       </StyledUnreadMessagesCounter>
     );
