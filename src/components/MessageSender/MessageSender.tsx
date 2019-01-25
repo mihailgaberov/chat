@@ -9,7 +9,7 @@ import { readRecord } from '../../utilities/localStorageService';
 import { getTime12Hours, getTime24hours } from '../../utilities/common';
 
 interface IMessageSenderDispatchProps {
-  sendMessage: (message: {from: string, content: string, time: string}) => void;
+  sendMessage: (message: { from: string, content: string, time: string }) => void;
 }
 
 export class MessageSender extends React.Component {
@@ -18,12 +18,14 @@ export class MessageSender extends React.Component {
     chatMessage: ''
   };
 
+  private messagesInputRef = React.createRef<HTMLInputElement>();
+
   public render() {
     const { chatMessage } = this.state;
 
     return (
       <StyledMessageSender>
-        <input type='text' id='input-chat-message' value={chatMessage} onChange={this.handleOnChange}/>
+        <input type='text' ref={this.messagesInputRef} value={chatMessage} onChange={this.handleOnChange}/>
         <button onClick={this.handleClick}>
           <FontAwesomeIcon icon={faPaperPlane} color="white" size="2x"/>
         </button>
@@ -38,8 +40,12 @@ export class MessageSender extends React.Component {
   private handleClick = () => {
     const { username, chatMessage } = this.state;
     if (chatMessage !== '') {
-    // @ts-ignore
-    this.props.sendMessage({ from: username, content: chatMessage, time: this.getTime() });
+      // @ts-ignore
+      this.props.sendMessage({ from: username, content: chatMessage, time: this.getTime() });
+
+      // Clear the input field and put the focus back to it to be ready for the next message
+      this.setState({ chatMessage: '' });
+      (this.messagesInputRef.current as HTMLInputElement).focus();
     }
   };
 
@@ -49,7 +55,7 @@ export class MessageSender extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<any>): IMessageSenderDispatchProps => ({
-  sendMessage: (message: { from: string, content: string, time: string}) => dispatch(sendMessage(message)),
+  sendMessage: (message: { from: string, content: string, time: string }) => dispatch(sendMessage(message)),
 });
 
 export default connect(null, mapDispatchToProps)(MessageSender);
