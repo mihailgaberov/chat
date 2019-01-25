@@ -20,8 +20,6 @@ class ChatArea extends React.Component {
   public render() {
     const { messages } = this.props as IChatAreaProps;
 
-    console.log('>>> messages count: ', messages.length);
-
     return (
       <StyledChatArea ref={this.chatAreaRef}>
           {messages.map((element: { from: string, content: string, time: string, type: string}, idx: number) => {
