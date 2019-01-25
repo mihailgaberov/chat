@@ -28,3 +28,7 @@ export const getTime12Hours = (): string => {
 
   return `${hours}:${mins}`
 };
+
+export const scrollToBottom = (elementToBeScrolled: Element): void => {
+  elementToBeScrolled.scrollTop = elementToBeScrolled.scrollHeight;
+};

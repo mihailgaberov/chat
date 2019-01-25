@@ -2,35 +2,50 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
+import { scrollToBottom } from '../../utilities/common';
 
-interface IChatAreaStare {
+interface IChatAreaState {
   messageState: {
     messages: []
   }
 }
 
-class ChatArea extends React.Component {
-  public render() {
-    // @ts-ignore
-    const { messages } = this.props;
+interface IChatAreaProps {
+    messages: []
+}
 
-    console.log('>>> messages: ', messages);
+class ChatArea extends React.Component {
+  private chatAreaRef = React.createRef<HTMLDivElement>();
+
+  public render() {
+    const { messages } = this.props as IChatAreaProps;
+
+    console.log('>>> messages count: ', messages.length);
 
     return (
-      <StyledChatArea>
-        {messages.map((element: { from: string, content: string, time: string, type: string}, idx: number) => {
-          return (
-            <React.Fragment key={idx}>
-              <Message message={element}/>
-            </React.Fragment>
-          )
-        })}
+      <StyledChatArea ref={this.chatAreaRef}>
+          {messages.map((element: { from: string, content: string, time: string, type: string}, idx: number) => {
+            return (
+              <React.Fragment key={idx}>
+                <Message message={element}/>
+              </React.Fragment>
+            )
+          })}
       </StyledChatArea>
     );
   }
+
+  public componentDidUpdate(): void {
+    const chatAreaElement: Element = this.chatAreaRef.current as Element;
+    const shouldScroll: boolean = chatAreaElement.scrollTop + chatAreaElement.clientHeight !== chatAreaElement.scrollHeight;
+
+    if (shouldScroll) {
+      scrollToBottom(chatAreaElement);
+    }
+  }
 }
 
-const mapStateToProps = (state: IChatAreaStare) => ({
+const mapStateToProps = (state: IChatAreaState) => ({
   messages: state.messageState.messages
 });
 
