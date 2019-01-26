@@ -1,14 +1,18 @@
 import * as React from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import { HashRouter, Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import ChatPage from '../pages/Chat/ChatPage';
 import SettingsPage from '../pages/Settings/SettingsPage';
+import { ComponentType } from 'react';
+
+// Fix React Router activeclass setting for redux connected components
+const BlockedNavigation = withRouter(Navigation as ComponentType<RouteComponentProps>);
 
 const AppRouter: React.FunctionComponent = () => {
   return (
     <HashRouter>
       <React.Fragment>
-        <Navigation />
+        <BlockedNavigation />
         <Switch>
           <Route exact={true} path='/' component={ChatPage} />
           <Route path='/chat' component={ChatPage} />
