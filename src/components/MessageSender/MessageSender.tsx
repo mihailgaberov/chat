@@ -35,8 +35,9 @@ export class MessageSender extends React.Component {
 
     return (
       <StyledMessageSender>
-        <input type='text' ref={this.messagesInputRef} value={chatMessage} onChange={this.handleOnChange}/>
-        <button onClick={this.handleClick}>
+        <input id='send-message-input' type='text' ref={this.messagesInputRef} value={chatMessage}
+               onChange={this.handleOnChange}/>
+        <button id='send-message-btn' onClick={this.handleClick}>
           <FontAwesomeIcon icon={faPaperPlane} color="white" size="2x"/>
         </button>
       </StyledMessageSender>
@@ -78,9 +79,10 @@ export class MessageSender extends React.Component {
   };
 
   private cleanMessageInput = (): void => {
-    // Clear the input field and put the focus back to it to be ready for the next message
     this.setState({ chatMessage: '' });
-    (this.messagesInputRef.current as HTMLInputElement).focus();
+    if ((this.messagesInputRef.current as HTMLInputElement)) {
+      (this.messagesInputRef.current as HTMLInputElement).focus();
+    }
   };
 
   private getTime = (): string => {
