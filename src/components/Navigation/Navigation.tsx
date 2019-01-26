@@ -26,6 +26,7 @@ interface INavProps {
 interface INavState {
   shouldBlink: boolean;
   unreadMessages: number;
+  receivedUnreadMessages: IMessage[];
 }
 
 class Navigation extends React.Component<INavProps, INavState> {
@@ -35,6 +36,7 @@ class Navigation extends React.Component<INavProps, INavState> {
     this.state = {
       shouldBlink: false,
       unreadMessages: 0,
+      receivedUnreadMessages: [],
     };
   }
 
@@ -93,15 +95,16 @@ class Navigation extends React.Component<INavProps, INavState> {
 
   private updateUnreadMessagesCount = () => {
     const { messages, username } = this.props;
-    const receivedUnreadMessages = messages.filter((msg: IMessage) => msg.type === 'received' && msg.from !== username);
+    const receivedUnreadMessages: IMessage[] = messages.filter((msg: IMessage) => msg.type === 'received' && msg.from !== username);
     this.setState({
+      receivedUnreadMessages,
       unreadMessages: receivedUnreadMessages.length
     });
   };
 
   private clearNotifications = () => {
     console.log('>>> clear ');
-    this.setState({ unreadMessages: 0 });
+    this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
     this.stopBlinking();
   };
 }
