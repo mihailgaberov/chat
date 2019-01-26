@@ -10,7 +10,7 @@ interface IUserProfileState {
   username: string;
 }
 
-class UserProfile extends React.Component<{ translations: IAppContext }> {
+export class UserProfile extends React.Component<{ translations: IAppContext }> {
   public state: IUserProfileState = {
     username: readRecord('username') || 'guest0001'
   };
