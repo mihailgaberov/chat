@@ -48,10 +48,13 @@ class Navigation extends React.Component<INavProps, INavState> {
     const { messages } = this.props;
 
     if (prevProps.messages.length !== messages.length && !isPageActive('chat')) {
-      console.table(messages);
-
-      this.startBlinking();
-      this.updateUnreadMessagesCount();
+      const lastMessage: IMessage = messages[messages.length-1];
+      this.setState({
+        receivedUnreadMessages: [...this.state.receivedUnreadMessages, lastMessage]
+    }, () => {
+        this.startBlinking();
+        this.updateUnreadMessagesCount();
+      });
     }
   }
 
@@ -94,16 +97,12 @@ class Navigation extends React.Component<INavProps, INavState> {
   };
 
   private updateUnreadMessagesCount = () => {
-    const { messages, username } = this.props;
-    const receivedUnreadMessages: IMessage[] = messages.filter((msg: IMessage) => msg.type === 'received' && msg.from !== username);
     this.setState({
-      receivedUnreadMessages,
-      unreadMessages: receivedUnreadMessages.length
+      unreadMessages: this.state.receivedUnreadMessages.length
     });
   };
 
   private clearNotifications = () => {
-    console.log('>>> clear ');
     this.setState({ unreadMessages: 0, receivedUnreadMessages: [] });
     this.stopBlinking();
   };
