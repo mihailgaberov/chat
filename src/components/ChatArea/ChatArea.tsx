@@ -14,7 +14,7 @@ interface IChatAreaProps {
     messages: []
 }
 
-class ChatArea extends React.Component {
+export class ChatArea extends React.Component {
   private chatAreaRef = React.createRef<HTMLDivElement>();
 
   public render() {

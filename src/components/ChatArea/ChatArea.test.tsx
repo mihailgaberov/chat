@@ -1,9 +1,12 @@
-import {shallow} from 'enzyme';
+import { mount } from 'enzyme';
 import * as React from 'react';
-import ChatArea from './ChatArea';
+import { ChatArea } from './ChatArea';
+import Message, { IMessage } from '../Message/Message';
+
+const message: IMessage = {from: 'test', content: 'test test', time: '11:11', type: 'sent'};
 
 const setup = () => {
-  return shallow(<ChatArea />)
+  return mount(<ChatArea messages={[message, message]}/>)
 };
 
 describe('ChatArea component', () => {
@@ -11,4 +14,9 @@ describe('ChatArea component', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
   });
+
+  it('should render correct number of messages', () => {
+    const wrapper = setup();
+    expect(wrapper.find(Message).length).toEqual(2);
+  })
 });
