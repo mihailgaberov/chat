@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { connectSocket } from 'src/store/socket/actions';
+import { connectSocket } from '../../store/socket/actions';
 import StyledNavigation from './StyledNavigation';
 import { faCog, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +29,7 @@ interface INavState {
   receivedUnreadMessages: IMessage[];
 }
 
-class Navigation extends React.Component<INavProps, INavState> {
+export class Navigation extends React.Component<INavProps, INavState> {
   constructor(props: INavProps) {
     super(props);
 
