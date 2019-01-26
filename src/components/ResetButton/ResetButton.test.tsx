@@ -14,4 +14,15 @@ describe('ResetButton component', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
   });
+
+  it('should reset all settings on click', () => {
+    const wrapper = setup();
+    const instance = wrapper.instance();
+    const spy = jest.spyOn(instance, 'resetSettings');
+
+    wrapper.find('button').simulate('click');
+    setTimeout(() => {
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+  });
 });

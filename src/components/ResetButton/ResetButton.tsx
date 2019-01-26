@@ -3,12 +3,18 @@ import StyledResetButton from './StyledResetButton';
 import { clearAll } from '../../utilities/localStorageService';
 import {IAppContext } from '../../utilities/TranslationsProvider';
 
-const resetSettings = () => clearAll();
 
-const ResetButton = ({translations}: {translations: IAppContext}) => (
-  <StyledResetButton>
-    <button onClick={resetSettings}>{translations.resetButtonLabel}</button>
-  </StyledResetButton>
-);
+class ResetButton extends React.Component<{ translations: IAppContext }> {
+  private resetSettings = () => clearAll();
+
+  public render() {
+    const { translations } = this.props;
+    return (
+      <StyledResetButton>
+        <button onClick={this.resetSettings}>{translations.resetButtonLabel}</button>
+      </StyledResetButton>
+    );
+  }
+}
 
 export default ResetButton;
