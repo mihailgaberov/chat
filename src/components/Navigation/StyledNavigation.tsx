@@ -34,6 +34,16 @@ const StyledNavigation = styled("ul")`
       span {
         padding: 14px;
         font-size: 1.4em;
+        
+        /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+        /* Portrait */
+        @media only screen 
+          and (min-device-width: 320px) 
+          and (max-device-width: 568px)
+          and (-webkit-min-device-pixel-ratio: 2)
+          and (orientation: portrait) {
+            padding: 7px;
+        }      
       }
     }
     
