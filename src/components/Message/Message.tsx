@@ -13,7 +13,7 @@ export interface IMessage {
 const Message = ({message}: {message: IMessage}) => (
   <React.Fragment>
       <div id='nickname-container'>
-          <Nickname value={message.from} shouldRender={message.type === 'received'}/>
+        {message.type === 'received' && <Nickname value={message.from} />}
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
       </div>
       <StyledMessage type={message.type}>

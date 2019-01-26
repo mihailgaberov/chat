@@ -15,7 +15,6 @@ class LanguageSelector extends React.Component<{ translations: IAppContext, chan
           <option value='en'>{translations.languageEN}</option>
           <option value='de'>{translations.languageDE}</option>
         </select>
-
       </StyledLanguageSelector>
     );
   }
