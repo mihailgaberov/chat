@@ -47,8 +47,10 @@ export class MessageSender extends React.Component {
     this.pressedKeysMap = {};
   };
 
-
   private handleKeyPress = (e: KeyboardEvent) => {
+    if (readRecord('ctrlEnterSending') === 'Off') {
+      return;
+    }
     e = e || event;
     this.pressedKeysMap[e.key] = e.type === 'keydown';
 
