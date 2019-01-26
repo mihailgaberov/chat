@@ -10,6 +10,7 @@ import { withTranslations } from '../../utilities/withTranslations';
 import UnreadMessagesCounter from '../UnreadMessagesCounter/UnreadMessageCounter';
 import { IAppContext } from '../../utilities/TranslationsProvider';
 import { IMessage } from '../Message/Message';
+import { isPageActive } from '../../utilities/common';
 
 interface INavDispatchProps {
   connectToSockets: () => void;
@@ -39,17 +40,16 @@ class Navigation extends React.Component<INavProps, INavState> {
 
   public componentDidMount(): void {
     this.props.connectToSockets();
-    this.setState({ unreadMessages: 0 });
   }
 
   public componentDidUpdate(prevProps: any): void {
-    const { messages, username } = this.props;
+    const { messages } = this.props;
 
-    if (prevProps.messages.length !== messages.length) {
-      if (messages.filter((msg: IMessage) => msg.from === username).length === 0) {
-        this.startBlinking();
-        this.updateUnreadMessagesCount();
-      }
+    if (prevProps.messages.length !== messages.length && !isPageActive('chat')) {
+      console.table(messages);
+
+      this.startBlinking();
+      this.updateUnreadMessagesCount();
     }
   }
 
@@ -60,7 +60,9 @@ class Navigation extends React.Component<INavProps, INavState> {
     return appContext && (
       <StyledNavigation>
         <li>
-          <NavLink exact={true} activeClassName='active' className={shouldBlink ? 'blinking' : 'no-blinking'}
+          <NavLink exact={true} activeClassName='active'
+                   className={shouldBlink ? 'blinking' : 'no-blinking'}
+                   onClick={this.clearNotifications}
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
             <UnreadMessagesCounter count={unreadMessages}/>
@@ -82,21 +84,25 @@ class Navigation extends React.Component<INavProps, INavState> {
       shouldBlink: true
     });
   };
-  /*
-   private stopBlinking = (): void => {
-     this.setState({
-       shouldBlink: false
-     });
-   };*/
+
+  private stopBlinking = (): void => {
+    this.setState({
+      shouldBlink: false
+    });
+  };
 
   private updateUnreadMessagesCount = () => {
-    const { messages } = this.props;
-
-    const receivedUnreadMessages = messages.filter((msg: IMessage) => msg.type === 'received');
-    console.log('revei: ', receivedUnreadMessages);
+    const { messages, username } = this.props;
+    const receivedUnreadMessages = messages.filter((msg: IMessage) => msg.type === 'received' && msg.from !== username);
     this.setState({
       unreadMessages: receivedUnreadMessages.length
     });
+  };
+
+  private clearNotifications = () => {
+    console.log('>>> clear ');
+    this.setState({ unreadMessages: 0 });
+    this.stopBlinking();
   };
 }
 
