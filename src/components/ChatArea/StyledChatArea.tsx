@@ -5,9 +5,8 @@ const StyledChatArea = styled("section")`
   background-color: ${(props) => props.theme.secondaryDarkColor};
   display: inline-block;
   position: absolute;
-  bottom: 74px;
   width: 100%;
-  height: 533px;
+  height: 100%;
   overflow-y: scroll;
   left: 0;
   
