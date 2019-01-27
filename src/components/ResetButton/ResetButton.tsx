@@ -5,8 +5,6 @@ import {IAppContext } from '../../utilities/TranslationsProvider';
 
 
 class ResetButton extends React.Component<{ translations: IAppContext }> {
-  private resetSettings = () => clearAll();
-
   public render() {
     const { translations } = this.props;
     return (
@@ -15,6 +13,8 @@ class ResetButton extends React.Component<{ translations: IAppContext }> {
       </StyledResetButton>
     );
   }
+
+  private resetSettings = () => clearAll();
 }
 
 export default ResetButton;
