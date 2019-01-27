@@ -6,6 +6,7 @@ import Message, { IMessage } from '../Message/Message';
 const message: IMessage = {from: 'test', content: 'test test', time: '11:11', type: 'sent'};
 
 const setup = () => {
+  // @ts-ignore
   return mount(<ChatArea messages={[message, message]}/>)
 };
 
