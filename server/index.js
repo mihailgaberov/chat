@@ -24,7 +24,9 @@ io.on('connect', (socket) => {
   });
 });
 
+const port = process.env.PORT || 3001;
+app.set('port', port);
 
-http.listen(process.env.PORT || 3001, () => {
+http.listen(port, () => {
   // console.log('listening on *:3001');
 });
