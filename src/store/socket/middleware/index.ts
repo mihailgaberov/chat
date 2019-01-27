@@ -18,7 +18,7 @@ const socketMiddleware = (store: any) => {
 
     switch (action.type) {
       case CONNECT_SOCKET:
-        socket.connect(messageState.user, socketState.port);
+        socket.connect(messageState.user, process.env.PORT || socketState.port);
         break;
 
       case SEND_MESSAGE_REQUEST:
