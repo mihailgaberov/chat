@@ -27,9 +27,10 @@ export default class Socket {
 
     // const host = `http://localhost:${port}`;
     // const host = `http://192.168.0.220:${port}`; // Running from local network
-    const host = `https://mihails-chat.herokuapp.com`; // Running from Heroku
+    // const host = `https://mihails-chat.herokuapp.com`; // Running from Heroku
 
-    this.socket = io.connect(host);
+    // this.socket = io.connect(host);
+    this.socket = io.connect();
 
     this.socket.on(EVENTS.CONNECT, this.onConnected);
   };
