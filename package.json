@@ -19,7 +19,8 @@
     "socket.io": "^2.2.0",
     "socket.io-client": "^2.2.0",
     "styled-components": "^4.1.3",
-    "ts-node": "^8.0.1"
+    "ts-node": "^8.0.1",
+    "typescript": "^3.2.4"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -48,8 +49,7 @@
     "enzyme-to-json": "^3.3.5",
     "lodash": "^4.17.11",
     "nodemon": "^1.18.9",
-    "sinon": "^7.2.2",
-    "typescript": "^3.2.2"
+    "sinon": "^7.2.2"
   },
   "engines": {
     "node": "latest"
