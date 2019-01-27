@@ -47,7 +47,7 @@ export class Navigation extends React.Component<INavProps, INavState> {
   public componentDidUpdate(prevProps: any): void {
     const { messages } = this.props;
 
-    if (prevProps.messages.length !== messages.length && !isPageActive('chat')) {
+    if (prevProps.messages.length !== messages.length && isPageActive('settings')) {
       const lastMessage: IMessage = messages[messages.length-1];
       this.setState({
         receivedUnreadMessages: [...this.state.receivedUnreadMessages, lastMessage]
