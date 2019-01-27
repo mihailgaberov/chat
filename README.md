@@ -6,6 +6,10 @@ A single page application (SPA) implementing Socket.io based chat app, built wit
 - styled-components (SASS)
 - Jest/Enzyme/Sinon
 
+### Screenshots
+[Dark theme, iPhone 6/7/8](https://github.com/mihailgaberov/chat-spa/blob/master/dark_iphone_678.PNG)
+
+
 ### Deploy to Heroku
 
 1. `npm build` to build the project to `build` folder.
