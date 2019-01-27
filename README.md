@@ -27,6 +27,29 @@ A single page application (SPA), implementing Socket.io based chat app, built wi
   5. LanguageSwitcher - dropdown menu allowing changing of the app language (currently English and Deutsch are supported)
   6. Reset button - resets are settings stored to local storage
   
+  ### Improvements
+   - x Optimized for iDevices (media queries).
+   - x Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
+   - x Clear input field when new message is sent
+   - x Auto scroll to bottom main chat area when new messages exceed available space.
+   - x Prevent 'doubling messages' (or multiple messages duplicates when more clients are connected)
+   - x Add unit tests for the react components
+   - Add unit tests for redux stuff - reducers, store, action creators
+   - x Add media queries for responsiveness - test and adjust on more devices
+   - x Add demo to heroku
+   - x Add nice how-to in README
+   - Add animations for the messages (animejs)
+   - Add sounds (with options to turn on/off in settings)
+   - Add more color themes
+   - Add welcome message (broadcasts on user connected)
+   - x Add icons ( use font awesome)
+   - History of all the conversations
+   - Handle case when socket's connection state change (visually)
+   - Handle case when there has been a socket error
+   - Handle case when a very long word (without) spaces is entered and it goes beyond the background.
+   - Emoticons support - https://www.npmjs.com/package/react-emoji-render, https://github.com/missive/emoji-mart
+   - Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
+  
 
 
 ### Screenshots
@@ -83,3 +106,13 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
 4. Commit all: `git commit -m 'Deploy to Heroky'`.
 5. Run `git push heroku master`.
 6. Open the app from the given URL (in this case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).
+
+### Resources
+- https://socket.io/get-started/chat
+- https://www.typescriptlang.org/docs/handbook/decorators.html
+- http://www.typescriptlang.org/
+- http://www.typescriptlang.org/docs/handbook/compiler-options.html
+- http://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+- https://github.com/Microsoft/TypeScript-React-Starter
+- https://animejs.com/
+- https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
