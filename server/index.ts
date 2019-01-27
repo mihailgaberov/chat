@@ -1,6 +1,12 @@
-const app = require('express')();
+const path = require('path');
+const express = require('express');
+const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+
+app.use(express.static(path.join(__dirname, '../build')));
+
+app.get('/', (req: any, res: any) => res.sendFile(__dirname + '/index.html'));
 
 io.on('connect', (socket: any) => {
   // Say Hi to all connected clients
