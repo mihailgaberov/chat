@@ -13,6 +13,8 @@ io.on('connect', (socket) => {
   io.emit('broadcast', '[Server]: Welcome stranger!');
 
   socket.on('message', (msg) => {
+    // console.log(`message received from user: ${msg.from}`);
+    // console.log(`message received content: ${msg.content}`);
     io.emit('message', msg);
   });
 
@@ -24,5 +26,5 @@ io.on('connect', (socket) => {
 
 
 http.listen(3001, () => {
-  console.log('listening on *:3001');
+  // console.log('listening on *:3001');
 });
