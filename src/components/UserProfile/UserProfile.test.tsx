@@ -26,6 +26,7 @@ describe('UserProfile component', () => {
   it('should be able to change user name', () => {
     const wrapper = setup();
     const instance = wrapper.instance();
+    // @ts-ignore
     const spy = jest.spyOn(instance, 'handleUserNameChange');
 
     wrapper.find('input').simulate('change', { currentTarget: { value: 'guest0001' } });
