@@ -17,7 +17,7 @@ A single page application (SPA) implementing, Socket.io based chat app, built wi
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/light_iphonex_with_notifications.jpg)
 
 ### Demo
-[mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com))
+[mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)
 
 ### Deploy to Heroku
 
