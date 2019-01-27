@@ -6,6 +6,7 @@ import translationsMock from '../../translations/translations-mock';
 jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
+  // @ts-ignore
   return shallow(<UserProfile translations={translationsMock} changeUsername={jest.fn()}/>)
 };
 
