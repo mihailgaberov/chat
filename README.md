@@ -7,7 +7,7 @@ A single page application (SPA) implementing, Socket.io based chat app, built wi
 - Jest/Enzyme/Sinon
 
 ### Screenshots
-![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/dark_iphone_678.PNG))
+![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/dark_iphone_678.PNG)
 
 
 ### Deploy to Heroku
