@@ -68,61 +68,78 @@ const StyledUnreadMessagesCounter = styled("div")`
   
   /* ----------- iPad 1, 2, Mini and Air ----------- */
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    right: 38%;
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    right: 41%;
-}
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    right: 38%;
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    right: 41%;
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    right: 41%;
-}
-
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    right: 44%;
-}
+  /* Portrait */
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+      right: 38%;
+  }
+  
+  /* Landscape */
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+      right: 41%;
+  }
+  
+  /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+  
+  /* Portrait */
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+      right: 38%;
+  }
+  
+  /* Landscape */
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+      right: 41%;
+  }
+  
+  /* ----------- iPad Pro 12.9" ----------- */
+  
+  /* Portrait and Landscape */
+  @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      right: 41%;
+  }
+  
+  @media only screen 
+    and (min-device-width: 1366px) 
+    and (max-device-width: 1366px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+      right: 44%;
+  }
+  
+  /* ----------- Non-Retina Screens ----------- */
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+     right: 45%;
+  }
+  
+  /* ----------- Retina Screens ----------- */
+  @media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) {
+    right: 45%;
+  }
 
 `;
 
