@@ -5,6 +5,7 @@ import { MessageSender } from './MessageSender';
 jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
+  // @ts-ignore
   return shallow(<MessageSender sendMessage={jest.fn()}/>)
 };
 
