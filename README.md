@@ -1,6 +1,7 @@
 # Mihail's Chat
 A single page application (SPA) implementing Socket.io based chat app, built with the following technical stack:
 - React with TypeScript (`create-react-app my-app --scripts-version=react-scripts-ts`)
+- Redux
 - Express.js with Socket.io
 - styled-components (SASS)
 - Jest/Enzyme/Sinon
