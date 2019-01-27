@@ -16,6 +16,8 @@ A single page application (SPA) implementing, Socket.io based chat app, built wi
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/light_iphone_x.jpg)
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/light_iphonex_with_notifications.jpg)
 
+### Demo
+[mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com))
 
 ### Deploy to Heroku
 
@@ -24,4 +26,4 @@ A single page application (SPA) implementing, Socket.io based chat app, built wi
 3. Make sure that express server loads static resources from it.
 4. Commit all: `git commit -m 'Deploy to Heroky'`.
 5. Run `git push heroku master`.
-6. Open the app from the given URL (in this case: [mihails-chat.herokuapp.com](http://mihails-chat.herokuapp.com)).
+6. Open the app from the given URL (in this case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).
