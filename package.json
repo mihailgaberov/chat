@@ -1,5 +1,6 @@
 {
-  "name": "chat-spa",
+  "name": "mihails-chat",
+  "author": "Mihail Gaberov <mihail.gaberov@gmail.com>",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
