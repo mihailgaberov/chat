@@ -27,7 +27,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "server:watch": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" server/index.ts"
+    "server:watch": "nodemon --watch 'src/**/*.ts' --exec \"node\" server/index.js"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.15",
