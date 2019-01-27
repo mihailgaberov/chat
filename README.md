@@ -1,5 +1,5 @@
 # Mihail's Chat
-A single page application (SPA) implementing Socket.io based chat app, built with the following technical stack:
+A single page application (SPA) implementing, Socket.io based chat app, built with the following technical stack:
 - React with TypeScript (`create-react-app my-app --scripts-version=react-scripts-ts`)
 - Redux
 - Express.js with Socket.io
@@ -7,7 +7,7 @@ A single page application (SPA) implementing Socket.io based chat app, built wit
 - Jest/Enzyme/Sinon
 
 ### Screenshots
-[Dark theme, iPhone 6/7/8](https://github.com/mihailgaberov/chat-spa/blob/master/dark_iphone_678.PNG)
+![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/dark_iphone_678.PNG))
 
 
 ### Deploy to Heroku
