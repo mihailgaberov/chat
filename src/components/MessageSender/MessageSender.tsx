@@ -49,7 +49,7 @@ export class MessageSender extends React.Component {
   };
 
   private handleKeyPress = (e: KeyboardEvent) => {
-    if (readRecord('ctrlEnterSending') === 'Off') {
+    if (readRecord('ctrlEnterSending') !== 'On') {
       return;
     }
     e = e || event;
