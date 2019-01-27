@@ -19,6 +19,35 @@ A single page application (SPA) implementing, Socket.io based chat app, built wi
 ### Demo
 [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)
 
+### Running The App locally
+
+To run the app, follow these steps.
+
+1. Ensure that [NodeJS](http://nodejs.org/) is installed.
+2. Install [npm](https://https://www.npmjs.com/).
+3. From the project folder, execute the following command:
+
+To install dependencies:
+```shell
+  npm i
+```
+To run the client app:
+
+```shell
+  npm start
+```
+To run the server app:
+
+```shell
+  npm run server:watch
+```
+To run the tests:
+
+```shell
+  npm t
+```
+Browse to [http://localhost:3000](http://localhost:3000)
+
 ### Deploy to Heroku
 
 1. `npm build` to build the project to `build` folder.
