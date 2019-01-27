@@ -18,6 +18,7 @@ describe('MessageSender component', () => {
   it('should call sendChatMessage on click Send button', () => {
     const wrapper = setup();
     const instance = wrapper.instance();
+    // @ts-ignore
     const spy = jest.spyOn(instance, 'sendChatMessage');
     wrapper.find('button').simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
