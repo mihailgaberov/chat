@@ -38,21 +38,21 @@ A single page application (SPA), implementing Socket.io based chat app, built wi
   6. Reset button - resets are settings stored to local storage
   
   ### Improvements
-   - x Optimized for iDevices (media queries).
-   - x Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
-   - x Clear input field when new message is sent
-   - x Auto scroll to bottom main chat area when new messages exceed available space.
-   - x Prevent 'doubling messages' (or multiple messages duplicates when more clients are connected)
-   - x Add unit tests for the react components
+   - :+1: Optimized for iDevices (media queries).
+   - :+1: Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
+   - :+1: Clear input field when new message is sent
+   - :+1: Auto scroll to bottom main chat area when new messages exceed available space.
+   - :+1: Prevent 'doubling messages' (or multiple messages duplicates when more clients are connected)
+   - :+1: Add unit tests for the react components
    - Add unit tests for redux stuff - reducers, store, action creators
-   - x Add media queries for responsiveness - test and adjust on more devices
-   - x Add demo to heroku
-   - x Add nice how-to in README
+   - :+1: Add media queries for responsiveness - test and adjust on more devices
+   - :+1: Add demo to heroku
+   - :+1: Add nice how-to in README
    - Add animations for the messages (animejs)
    - Add sounds (with options to turn on/off in settings)
    - Add more color themes
    - Add welcome message (broadcasts on user connected)
-   - x Add icons ( use font awesome)
+   - :+1: Add icons ( use font awesome)
    - History of all the conversations
    - Handle case when socket's connection state change (visually)
    - Handle case when there has been a socket error
