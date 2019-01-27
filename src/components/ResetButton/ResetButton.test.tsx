@@ -18,6 +18,7 @@ describe('ResetButton component', () => {
   it('should reset all settings on click', () => {
     const wrapper = setup();
     const instance = wrapper.instance();
+    // @ts-ignore
     const spy = jest.spyOn(instance, 'resetSettings');
 
     wrapper.find('button').simulate('click');
