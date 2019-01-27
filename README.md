@@ -61,7 +61,7 @@ A single page application (SPA), implementing Socket.io based chat app, built wi
    - Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
   
 ### Demo
-[mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)
+:star: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com) :star:
 
 ### Running The App locally
 
