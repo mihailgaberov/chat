@@ -37,7 +37,7 @@ A single page application (SPA), implementing Socket.io based chat app, built wi
   5. LanguageSwitcher - dropdown menu allowing changing of the app language (currently English and Deutsch are supported)
   6. Reset button - resets are settings stored to local storage
   
-  ### Improvements
+  ### Improvements (done and pending)
    - :+1: Optimized for iDevices (media queries).
    - :+1: Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
    - :+1: Clear input field when new message is sent
