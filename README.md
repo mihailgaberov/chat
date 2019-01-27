@@ -24,7 +24,7 @@ A single page application (SPA), implementing Socket.io based chat app, built wi
 To run the app, follow these steps.
 
 1. Ensure that [NodeJS](http://nodejs.org/) is installed.
-2. Install [npm](https://https://www.npmjs.com/).
+2. Install [npm](https://www.npmjs.com/).
 3. From the project folder, execute the following command:
 
 To install dependencies:
