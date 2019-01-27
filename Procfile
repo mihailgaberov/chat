@@ -1,1 +1,1 @@
-web: node ./server/index.ts
+web: nodemon --watch 'src/**/*.ts' --exec "ts-node" server/index.ts
