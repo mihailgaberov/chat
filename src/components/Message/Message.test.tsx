@@ -5,7 +5,7 @@ import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
 
 const setup = (type = 'received') => {
-  return shallow(<Message message={{from: 'guest0001', content: 'hi', time: '11:03', type: type}}/>)
+  return shallow(<Message message={{from: 'guest0001', content: 'hi', time: '11:03', type}}/>)
 };
 
 describe('Message component', () => {
