@@ -34,7 +34,7 @@ A single page application (SPA), implementing Socket.io based chat, built with t
   2. Interface color component - change the color theme of the app
   3. ClockDisplay component - change the time mode 12h or 24h, shown with each message
   4. Send messages with Ctrl+Enter - On/Off
-  5. LanguageSwitcher - dropdown menu allowing changing of the app language (currently English and Deutsch are supported)
+  5. LanguageSwitcher - dropdown menu allowing changing the language of the app (currently English and Deutsch are supported)
   6. Reset button - resets are settings stored to local storage
   
   ### Improvements (done and pending)
