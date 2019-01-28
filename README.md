@@ -57,7 +57,7 @@ A single page application (SPA), implementing Socket.io based chat, built with t
    - Handle case when socket's connection state change (visually)
    - Handle case when there has been a socket error
    - Handle case when a very long word (without) spaces is entered and it goes beyond the message background color.
-   - Emoticons support
+   - :+1: Emoticons support
    - Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
   
 ### Demo
