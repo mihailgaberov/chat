@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import ChatPage from './SettingsPage';
+import SettingsPage from './SettingsPage';
 
 const setup = () => {
-  return shallow(<ChatPage />)
+  return shallow(<SettingsPage />)
 };
 
-describe('ChatPage', () => {
+describe('SettingsPage', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
