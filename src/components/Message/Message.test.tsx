@@ -1,5 +1,5 @@
-import {shallow} from 'enzyme';
 import * as React from 'react';
+import { shallow } from 'enzyme';
 import Message from './Message';
 import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
@@ -11,7 +11,7 @@ const setup = (type = 'received') => {
 describe('Message component', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
-    expect(wrapper).not.toBe(null)
+    expect(wrapper).not.toBe(null);
   });
 
   it('should render a message with nickname and time when receiving', () => {
