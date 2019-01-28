@@ -14,7 +14,6 @@ describe('Message component', () => {
     expect(wrapper).not.toBe(null)
   });
 
-
   it('should render a message with nickname and time when receiving', () => {
     const wrapper = setup();
     expect(wrapper.find(Nickname).length).toBe(1);

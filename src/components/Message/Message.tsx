@@ -5,7 +5,7 @@ import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
 import MicrolinkCard from '@microlink/react';
 import Linkify from 'linkifyjs/react';
-import getUrls from 'get-urls';
+import * as getUrls from 'get-urls';
 
 export interface IMessage {
   from: string;

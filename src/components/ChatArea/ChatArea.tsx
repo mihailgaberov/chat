@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
 import { scrollToBottom } from '../../utilities/common';
+import { IMessage } from '../Message/Message';
 
 interface IChatAreaState {
   messageState: {
@@ -22,7 +23,7 @@ export class ChatArea extends React.Component {
 
     return (
       <StyledChatArea ref={this.chatAreaRef}>
-          {messages.map((element: { from: string, content: string, time: string, type: string}, idx: number) => {
+          {messages.map((element: IMessage, idx: number) => {
             return (
               <React.Fragment key={idx}>
                 <Message message={element}/>

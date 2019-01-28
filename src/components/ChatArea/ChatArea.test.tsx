@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import * as React from 'react';
 import { ChatArea } from './ChatArea';
 import Message, { IMessage } from '../Message/Message';
@@ -7,7 +7,7 @@ const message: IMessage = {from: 'test', content: 'test test', time: '11:11', ty
 
 const setup = () => {
   // @ts-ignore
-  return mount(<ChatArea messages={[message, message]}/>)
+  return shallow(<ChatArea messages={[message, message]}/>)
 };
 
 describe('ChatArea component', () => {
