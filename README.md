@@ -59,7 +59,7 @@ A single page application (SPA), implementing Socket.io based chat, built with t
    - Handle case when there has been a socket error
    - Handle case when a very long word (without) spaces is entered and it goes beyond the message background color.
    - :+1: Emoticons support - such as :D, :P, :), ;), :wink:, :heart:, etc.
-   - Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
+   - :+1: Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
   
 ### Demo
 :star: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com) :star:
