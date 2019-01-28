@@ -16,6 +16,7 @@ A single page application (SPA), implementing Socket.io based chat, built with t
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/light_iphone_x.jpg)
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/light_iphonex_with_notifications.jpg)
 ![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/emoji_show.PNG)
+![screenshot](https://github.com/mihailgaberov/chat-spa/blob/master/screenshots/link_parsing_show.PNG)
 
 ## Application features:
 - Header
