@@ -90,10 +90,10 @@ To run the tests:
 ```shell
   npm t
 ```
-Browse to [http://localhost:3000](http://localhost:3000) and see the running app. In order to test, open it on two different computers,
+Browse to [http://localhost:3000](http://localhost:3000) and see the running app. In order to test, open it in two different computers,
  or computer and a phone, or two browsers on the same computer (one of it in incognito mode). 
  _If you are running it locally, make sure to change the __host__ variable in Socket.ts (line:28) and its value to match
- your local network address. The one of the computer you are running the server app._ 
+ your local network address - the one of the computer you are running the server app._ 
  
 
 ### Deploy to Heroku 
