@@ -115,6 +115,9 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 - https://github.com/Microsoft/TypeScript-React-Starter
 - https://animejs.com/
 - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+- https://www.styled-components.com/
+- https://airbnb.io/enzyme/docs/guides/jest.html
+- https://redux.js.org/api/store
 
 MIT License
 
