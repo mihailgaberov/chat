@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emojify from 'react-emojione';
 import StyledMessage from './StyledMessage';
 import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
@@ -17,7 +18,7 @@ const Message = ({message}: {message: IMessage}) => (
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
       </div>
       <StyledMessage type={message.type}>
-          {message.content}
+        <Emojify>{message.content}</Emojify>
       </StyledMessage>
   </React.Fragment>
 

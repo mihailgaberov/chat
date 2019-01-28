@@ -5,3 +5,4 @@ declare module "*.json"
 }
 
 declare module 'socket.io-client';
+declare module 'react-emojione';
