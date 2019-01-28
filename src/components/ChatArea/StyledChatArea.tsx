@@ -6,7 +6,7 @@ const StyledChatArea = styled("section")`
   display: inline-block;
   position: absolute;
   width: 100%;
-  height: calc( 100vh - 60px);
+  height: calc( 100vh - 125px);
   overflow-y: scroll;
   left: 0;
   
