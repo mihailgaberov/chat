@@ -96,7 +96,8 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
  your local network address. The one of the computer you are running the server app._ 
  
 
-### Deploy to Heroku
+### Deploy to Heroku 
+_This step assumes you have already a Heroku account, installed heroku-cli and did login._
 
 1. `npm build` to build the project to `build` folder.
 2. Include `build` folder to Git
