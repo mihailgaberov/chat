@@ -104,7 +104,7 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 3. Make sure that express server loads static resources from it.
 4. Commit all: `git commit -m 'Deploy to Heroky'`.
 5. Run `git push heroku master`.
-6. Open the app from the given URL (in this case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).
+6. Open the app from the given URL (in my case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).
 
 ### Resources
 - https://socket.io/get-started/chat
