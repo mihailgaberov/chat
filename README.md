@@ -100,7 +100,7 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
 _This step assumes you have already a Heroku account, installed heroku-cli and did login._
 
 1. `npm build` to build the project to `build` folder.
-2. Include `build` folder to Git
+2. Add `build` folder to be committed to Git
 3. Make sure that express server loads static resources from it.
 4. Commit all: `git commit -m 'Deploy to Heroky'`.
 5. Run `git push heroku master`.
