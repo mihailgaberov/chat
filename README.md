@@ -120,6 +120,10 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 - https://www.styled-components.com/
 - https://airbnb.io/enzyme/docs/guides/jest.html
 - https://redux.js.org/api/store
+- https://www.npmjs.com/package/linkifyjs
+- https://docs.microlink.io/sdk/getting-started/react/
+- https://www.npmjs.com/package/react-emojione
+- https://www.npmjs.com/package/get-urls
 
 MIT License
 
