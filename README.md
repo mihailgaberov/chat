@@ -40,6 +40,7 @@ A single page application (SPA), implementing Socket.io based chat, built with t
   6. Reset button - resets all settings stored to local storage
   
   ### Improvements (done and pending)
+   - :+1: Added possibility to send message via ENTER by default. If the setting to send messages with CTRL+ENTER is ON, then this is going to be the only way (except via mouse/touch of course).
    - :+1: Optimized for iDevices (media queries).
    - :+1: Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
    - :+1: Clear input field when new message is sent
