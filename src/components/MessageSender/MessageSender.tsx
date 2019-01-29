@@ -12,6 +12,11 @@ interface IMessageSenderDispatchProps {
   sendMessage: (message: { from: string, content: string, time: string }) => void;
 }
 
+const KEY_CODES = {
+  ENTER: 'Enter',
+  CTRL: 'Control'
+};
+
 export class MessageSender extends React.Component {
   public state = {
     username: readRecord('username') || 'guest0001',
@@ -49,15 +54,31 @@ export class MessageSender extends React.Component {
   };
 
   private handleKeyPress = (e: KeyboardEvent) => {
-    if (readRecord('ctrlEnterSending') !== 'On') {
-      return;
-    }
     e = e || event;
     this.pressedKeysMap[e.key] = e.type === 'keydown';
 
-    if ('Control' in this.pressedKeysMap && 'Enter' in this.pressedKeysMap) {
+    if (readRecord('ctrlEnterSending') !== 'On') {
+      this.sendOnPressEnter();
+    } else {
+      this.sendOnPressCtrlEnter();
+    }
+  };
+
+  private sendOnPressEnter = () => {
+    if (KEY_CODES.ENTER in this.pressedKeysMap && !(KEY_CODES.CTRL in this.pressedKeysMap)) {
       this.sendChatMessage();
       this.cleanMessageInput();
+    } else {
+      return; // For more readability - return explicitly (in JS all functions return undefined implicitly).
+    }
+  };
+
+  private sendOnPressCtrlEnter = () => {
+    if (KEY_CODES.CTRL in this.pressedKeysMap && KEY_CODES.ENTER in this.pressedKeysMap) {
+      this.sendChatMessage();
+      this.cleanMessageInput();
+    } else {
+      return;
     }
   };
 
