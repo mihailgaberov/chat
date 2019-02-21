@@ -40,29 +40,30 @@ A React single page chat application (SPA)р built with the following technologi
   6. Reset button - resets all settings stored to local storage
   
   ### Improvements (done and pending)
+   - Add video chat feature.
    - :+1: Added AM/PM time formatting for when 12h mode is selected.
    - :+1: Added possibility to send message via ENTER by default. If the setting to send messages with CTRL+ENTER is ON, then this is going to be the only way (except via mouse/touch of course).
    - :+1: Optimized for iDevices (media queries).
    - :+1: Fix blinking/active class for the Chat tab issue - related to React Router not able to properly re-render connected components https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
-   - :+1: Clear input field when new message is sent
+   - :+1: Clear input field when new message is sent.
    - :+1: Auto scroll to bottom main chat area when new messages exceed available space.
-   - :+1: Prevent 'doubling messages' (or multiple messages duplicates when more clients are connected)
-   - :+1: Add unit tests for the react components
-   - Add unit tests for redux stuff - reducers, store, action creators
-   - :+1: Add media queries for responsiveness - test and adjust on more devices
-   - :+1: Add demo to heroku
-   - :+1: Add nice how-to in README
-   - Add animations for the messages (animejs)
-   - Add sounds (with options to turn on/off in settings)
-   - Add more color themes
-   - Add welcome message (broadcasts on user connected)
-   - :+1: Add icons ( use font awesome)
-   - History of all the conversations
-   - Handle case when socket's connection state change (visually)
-   - Handle case when there has been a socket error
+   - :+1: Prevent 'doubling messages' (or multiple messages duplicates when more clients are connected).
+   - :+1: Add unit tests for the react components.
+   - Add unit tests for redux stuff - reducers, store, action creators.
+   - :+1: Add media queries for responsiveness - test and adjust on more devices.
+   - :+1: Add demo to heroku.
+   - :+1: Add nice how-to in README.
+   - Add animations for the messages (animejs).
+   - Add sounds (with options to turn on/off in settings).
+   - Add more color themes.
+   - Add welcome message (broadcasts on user connected).
+   - :+1: Add icons ( use font awesome).
+   - History of all the conversations.
+   - Handle case when socket's connection state change (visually).
+   - Handle case when there has been a socket error.
    - Handle case when a very long word (without) spaces is entered and it goes beyond the message background color.
    - :+1: Emoticons support - such as :D, :P, :), ;), :wink:, :heart:, etc.
-   - :+1: Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor
+   - :+1: Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor.
   
 ### Demo
 :star: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com) :star:
