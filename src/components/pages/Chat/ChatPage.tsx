@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ChatArea from '../../ChatArea/ChatArea';
+import ChatArea from '../../ChatArea';
 import MessageSender from '../../MessageSender';
 import StyledPageContainer from '../StyledPageContainer';
 import { withTranslations } from '../../../utilities/withTranslations';
