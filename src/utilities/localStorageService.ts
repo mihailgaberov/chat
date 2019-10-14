@@ -19,7 +19,7 @@ export const updateRecord = (key: string, value: string): { error?: string } | v
 
 // Delete a record
 export const deleteRecord = (key: string): { error?: string } | void => {
-  if (!key) { return { error: 'Store to localStorage failed. Invalid key.' }; }
+  if (!key) { return { error: 'Delete from localStorage failed. Invalid key.' }; }
   localStorage.removeItem(key)
 };
 
