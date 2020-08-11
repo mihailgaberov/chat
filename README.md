@@ -1,4 +1,4 @@
-# Mihail's Chat
+# Mihail's Chat (React)
 
 >_I have written a tutorial about how I did this. You can find it [here](https://mihail-gaberov.eu/how-i-build-chat-app-with-react-and-typescript-part1/) or [here](https://medium.freecodecamp.org/build-a-chat-app-with-react-typescript-and-socket-io-d7e1192d288),
 or [here](https://dev.to/mihailgaberov/how-to-build-a-chat-app-with-react-typescript-and-socket-io-2e1c)_
