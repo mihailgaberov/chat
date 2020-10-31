@@ -132,6 +132,11 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 - https://www.npmjs.com/package/react-emojione
 - https://www.npmjs.com/package/get-urls
 
+### Stargazers
+[![Stargazers repo roster for @mihailgaberov/chat](https://reporoster.com/stars/mihailgaberov/chat)](https://github.com/mihailgaberov/chat/stargazers)
+### Forkers
+[![Forkers repo roster for @mihailgaberov/chat](https://reporoster.com/forks/mihailgaberov/chat)](https://github.com/mihailgaberov/chat/network/members)
+
 MIT License
 
 Copyright (c) 2019 Mihail Gaberov
