@@ -138,6 +138,11 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 ### Forkers
 [![Forkers repo roster for @mihailgaberov/chat](https://reporoster.com/forks/mihailgaberov/chat)](https://github.com/mihailgaberov/chat/network/members)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mihailgaberov/chat&type=Date)](https://star-history.com/#mihailgaberov/chat&Date)
+
+
 MIT License
 
 Copyright (c) 2018-2022 Mihail Gaberov
