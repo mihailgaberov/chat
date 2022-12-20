@@ -1,7 +1,7 @@
 # Mihail's Chat (React)
 [![Tests](https://github.com/mihailgaberov/chat/actions/workflows/main.yml/badge.svg)](https://github.com/mihailgaberov/chat/actions/workflows/main.yml)
 
->_I have written a tutorial about how I did this. You can find it [here](https://mihail-gaberov.eu/how-i-build-chat-app-with-react-and-typescript-part1/) or [here](https://medium.freecodecamp.org/build-a-chat-app-with-react-typescript-and-socket-io-d7e1192d288),
+>_I have written a tutorial about how I did this. You can find it [here](https://www.mihailgaberov.com/build-a-chat-app-with-react-typescript-and-socket.io) or [here](https://medium.freecodecamp.org/build-a-chat-app-with-react-typescript-and-socket-io-d7e1192d288),
 or [here](https://dev.to/mihailgaberov/how-to-build-a-chat-app-with-react-typescript-and-socket-io-2e1c)_
 
 A React single page chat application (SPA) built with the following technologies:
