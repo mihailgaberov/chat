@@ -56,6 +56,6 @@
     "sinon": "^7.2.2"
   },
   "engines": {
-    "node": "latest"
+    "node": "18.x"
   }
 }
