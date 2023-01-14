@@ -56,7 +56,8 @@
     "sinon": "^7.2.2"
   },
   "browserslist": [
-    "defaults and supports es6-module",
-    "maintained node versions"
+    ">0.2%",
+    "not ie <= 11",
+    "not op_mini all"
   ]
 }
