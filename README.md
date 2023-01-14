@@ -109,7 +109,6 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
 _Heroku stopped offering free plans. Moved to [Vercel](https://chat-ten-khaki.vercel.app)._ 
 
 <del> ### Deploy to Heroku
-
 _This step assumes you have already a Heroku account, installed heroku-cli and did login._
 
 1. `npm build` to build the project to `build` folder.
