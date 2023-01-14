@@ -106,7 +106,7 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
  your local network address - the one of the computer you are running the server app._ 
  
 
-_Heroku stopped offering free plans._
+_Heroku stopped offering free plans. Moved to [Vercel](https://chat-ten-khaki.vercel.app)._ 
 
 <del> ### Deploy to Heroku
 
