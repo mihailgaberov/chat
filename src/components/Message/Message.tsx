@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Emojify from 'react-emojione';
+// import Emojify from 'react-emojione';
 import StyledMessage from './StyledMessage';
 import Nickname from '../Nickname';
 import Timestamp from '../Timestamp';
-import MicrolinkCard from '@microlink/react';
+// import MicrolinkCard from '@microlink/react';
 import Linkify from 'linkifyjs/react';
 import * as getUrls from 'get-urls';
 
@@ -25,7 +25,8 @@ class Message extends React.Component<{ message: IMessage }> {
           <Timestamp value={message.time} floatToRight={message.type === 'sent'}/>
         </div>
         <StyledMessage type={message.type}>
-          <Linkify><Emojify>{message.content} {this.parseURLs(message.content)}</Emojify></Linkify>
+          {/*<Linkify><Emojify>{message.content} {this.parseURLs(message.content)}</Emojify></Linkify>*/}
+          <Linkify>{message.content} {this.parseURLs(message.content)}</Linkify>
         </StyledMessage>
       </React.Fragment>
 
@@ -39,7 +40,8 @@ class Message extends React.Component<{ message: IMessage }> {
     }
 
     const parsedUrls = Array.from(urls).map((url: string, idx: number) => (
-      <MicrolinkCard url={url} key={idx}/>
+      // <MicrolinkCard url={url} key={idx}/>
+        <div key={idx}>{url}</div>
     ));
     return <React.Fragment>
       {parsedUrls}

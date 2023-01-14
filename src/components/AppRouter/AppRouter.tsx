@@ -4,9 +4,6 @@ import Navigation from '../Navigation/Navigation';
 import ChatPage from '../pages/Chat/ChatPage';
 import SettingsPage from '../pages/Settings/SettingsPage';
 
-// Fix React Router active class setting for redux connected components
-// const BlockedNavigation = withRouter(Navigation as ComponentType);
-
 export const AppRouter: React.FunctionComponent = () => {
   return (
     <HashRouter>
