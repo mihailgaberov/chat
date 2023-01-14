@@ -25,7 +25,7 @@
     "react-emojione": "^5.0.1",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts-ts": "^3.1.0",
+    "react-scripts-ts": "^4.0.8",
     "redux": "^4.0.1",
     "socket.io": "^2.5.0",
     "socket.io-client": "^2.2.0",
