@@ -1,8 +1,15 @@
 {
-  "name": "mihails-chat",
+  "name": "chat",
   "author": "Mihail Gaberov <mihail.gaberov@gmail.com>",
   "version": "1.3.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "server:watch": "nodemon --watch 'src/**/*.ts' --exec \"node\" server/index.js"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
@@ -18,20 +25,13 @@
     "react-emojione": "^5.0.1",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts-ts": "4.0.8",
+    "react-scripts-ts": "^3.1.0",
     "redux": "^4.0.1",
     "socket.io": "^2.5.0",
     "socket.io-client": "^2.2.0",
     "styled-components": "^4.1.3",
     "ts-node": "^8.0.1",
     "typescript": "^3.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "server:watch": "nodemon --watch 'src/**/*.ts' --exec \"node\" server/index.js"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.15",
@@ -57,5 +57,11 @@
   },
   "engines": {
     "node": "18.x"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
