@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "build": "react-scripts-ts build --openssl-legacy-provider",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "server:watch": "nodemon --watch 'src/**/*.ts' --exec \"node\" server/index.js"
