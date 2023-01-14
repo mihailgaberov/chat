@@ -71,7 +71,7 @@ A React single page chat application (SPA) built with the following technologies
    - :+1: Link Parser - youtube link (embedded video should appear), link to an image (embedded image should appear), all other links should appear as anchor.
   
 ### Demo
-:star: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com) :star:
+:star: [https://chat-ten-khaki.vercel.app](https://chat-ten-khaki.vercel.app) :star:
 
 ### Running The App locally
 
@@ -106,7 +106,10 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
  your local network address - the one of the computer you are running the server app._ 
  
 
-### Deploy to Heroku 
+_Heroku stopped offering free plans._
+
+<del> ### Deploy to Heroku
+
 _This step assumes you have already a Heroku account, installed heroku-cli and did login._
 
 1. `npm build` to build the project to `build` folder.
@@ -114,7 +117,7 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 3. Make sure that express server loads static resources from it.
 4. Commit all: `git commit -m 'Deploy to Heroky'`.
 5. Run `git push heroku master`.
-6. Open the app from the given URL (in my case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).
+6. Open the app from the given URL (in my case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).</del>
 
 ### Resources
 - https://socket.io/get-started/chat
@@ -145,7 +148,7 @@ _This step assumes you have already a Heroku account, installed heroku-cli and d
 
 MIT License
 
-Copyright (c) 2018-2022 Mihail Gaberov
+Copyright (c) 2018-2023 Mihail Gaberov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
