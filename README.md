@@ -106,17 +106,17 @@ Browse to [http://localhost:3000](http://localhost:3000) and see the running app
  your local network address - the one of the computer you are running the server app._ 
  
 
-_Heroku stopped offering free plans. Moved to [Vercel](https://chat-ten-khaki.vercel.app)._ 
+__Heroku stopped offering free plans. Moved to [Vercel](https://chat-ten-khaki.vercel.app).__ 
 
-<del> ### Deploy to Heroku
-_This step assumes you have already a Heroku account, installed heroku-cli and did login._
+<del> ### Deploy to Heroku</del>
+<del>_This step assumes you have already a Heroku account, installed heroku-cli and did login._</del>
 
-1. `npm build` to build the project to `build` folder.
-2. Add `build` folder to be committed to Git
-3. Make sure that express server loads static resources from it.
-4. Commit all: `git commit -m 'Deploy to Heroky'`.
-5. Run `git push heroku master`.
-6. Open the app from the given URL (in my case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).</del>
+<del>1. `npm build` to build the project to `build` folder.</del>
+<del>2. Add `build` folder to be committed to Git</del>
+<del>3. Make sure that express server loads static resources from it.</del>
+<del>4. Commit all: `git commit -m 'Deploy to Heroky'`.</del>
+<del>5. Run `git push heroku master`.</del>
+<del>6. Open the app from the given URL (in my case: [mihails-chat.herokuapp.com](https://mihails-chat.herokuapp.com)).</del>
 
 ### Resources
 - https://socket.io/get-started/chat
