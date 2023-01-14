@@ -38,7 +38,7 @@ const context = React.createContext<IAppContext | any>(null);
 const AppContextProvider = context.Provider;
 export const AppContextConsumer = context.Consumer;
 
-export default class TranslationProvider extends React.Component {
+export default class TranslationProvider extends React.Component<{children: any}> {
   public state = {
     translations: readRecord('lang') !== 'de' ? translationsEN : translationsDE,
     colorTheme: readRecord('theme') !== 'dark' ? lightTheme : darkTheme

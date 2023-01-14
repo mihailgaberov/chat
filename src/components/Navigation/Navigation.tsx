@@ -65,8 +65,7 @@ export class Navigation extends React.Component<INavProps, INavState> {
     return appContext && (
       <StyledNavigation>
         <li>
-          <NavLink exact={true} activeClassName='active'
-                   className={shouldBlink ? 'blinking' : 'no-blinking'}
+          <NavLink className={({ isActive }) => (isActive ? "active" : shouldBlink ? "blinking" : "no-blinking")}
                    onClick={this.clearNotifications}
                    to='/chat'>
             <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
@@ -75,7 +74,7 @@ export class Navigation extends React.Component<INavProps, INavState> {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName='active' to='/settings'>
+          <NavLink className={({ isActive }) => (isActive ? "active" : "")} to='/settings'>
             <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
             <span>{appContext.nav.settingsTabLabel}</span>
           </NavLink>
