@@ -1,6 +1,9 @@
 # Mihail's Chat (React)
 [![Tests](https://github.com/mihailgaberov/chat/actions/workflows/main.yml/badge.svg)](https://github.com/mihailgaberov/chat/actions/workflows/main.yml)
 
+> __Project update (Jan. 14, 2023)__: After [Heroku stopped their free plans](https://techcrunch.com/2022/08/25/heroku-announces-plans-to-eliminate-free-plans-blaming-fraud-and-abuse) the project demo site has not been accessible anymore. In order to make it accessible again, I've decided to deploy it to another platform, such as [Vercel](https://chat-ten-khaki.vercel.app/). As part of this _migration_ I updated the main libraries used in the project. This required several changes in the codebase so that it's aligned with the breaking changes came from the updates. Currently the demo site can be seen and interacted with but the main chat functionality is not working due to the serverless nature of the platform. I am looking for alternatives and will post updates here as soon as I found a working one.
+__The project is perfectly runnable locally__.
+
 >_I have written a tutorial about how I did this. You can find it [here](https://www.mihailgaberov.com/build-a-chat-app-with-react-typescript-and-socket.io) or [here](https://medium.freecodecamp.org/build-a-chat-app-with-react-typescript-and-socket-io-d7e1192d288),
 or [here](https://dev.to/mihailgaberov/how-to-build-a-chat-app-with-react-typescript-and-socket-io-2e1c)_
 
