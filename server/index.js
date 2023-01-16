@@ -33,3 +33,17 @@ app.set('port', port);
 httpServer.listen(port, () => {
   console.log('listening on *:3001');
 });
+
+const Pusher = require("pusher");
+
+const pusher = new Pusher({
+  appId: "1538389",
+  key: "b0df7f6ae0d889e0b55f",
+  secret: "6c986b2b37f791bdca3a",
+  cluster: "eu",
+  useTLS: true
+});
+
+pusher.trigger("my-channel", "my-event", {
+  message: "hello world"
+});
