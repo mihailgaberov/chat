@@ -24,7 +24,7 @@
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "redux": "^4.0.1",
-    "socket.io": "^4.5.4",
+    "socket.io": "^4.6.1",
     "socket.io-client": "^4.5.4",
     "styled-components": "^5.3.6",
     "ts-node": "^8.0.1"
