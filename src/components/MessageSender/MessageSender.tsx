@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
+import axios from 'axios';
+
 import { sendMessage } from '../../store/message/actions';
 import StyledMessageSender from './StyledMessageSender';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -96,6 +98,8 @@ export class MessageSender extends React.Component {
     if (chatMessage !== '') {
       // @ts-ignore
       this.props.sendMessage({ from: username, content: chatMessage, time: this.getTime() });
+      console.log('>>> chat msg: ', chatMessage)
+      axios.post('http://localhost:3001/message', { from: username, content: chatMessage, time: this.getTime() });
     }
   };
 

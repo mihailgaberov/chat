@@ -1,35 +1,29 @@
-const path = require('path');
+const Pusher = require('pusher');
 const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+require('dotenv').config();
+
 const app = express();
-const httpServer = require('http').createServer(app);
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "http://localhost:3000"
-  }
+
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+const pusher = new Pusher({
+  appId: process.env.PUSHER_APP_ID,
+  key: process.env.PUSHER_APP_KEY,
+  secret: process.env.PUSHER_APP_SECRET,
+  cluster: "eu",
+  useTLS: true
 });
-app.use(express.static(path.join(__dirname, '../build')));
+app.set('PORT', process.env.PORT || 3001);
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
-
-io.on('connection', (socket) => {
-  // Say Hi to all connected clients
-  io.emit('broadcast', '[Server]: Welcome stranger!');
-
-  socket.on('message', (msg) => {
-    console.log(`message received from user: ${msg.from}`);
-    console.log(`message received content: ${msg.content}`);
-    io.emit('message', msg);
-  });
-
-  // Say Bye to all connected clients
-  socket.on('disconnect', function () {
-    io.emit('broadcast', '[Server]: Bye, bye, stranger!');
-  });
+app.post('/message', (req, res) => {
+  const payload = req.body;
+  pusher.trigger('chat', 'message', payload);
+  res.send(payload)
 });
 
-const port = process.env.PORT || 3001;
-app.set('port', port);
-
-httpServer.listen(port, () => {
-  console.log('listening on *:3001');
-});
+app.listen(app.get('PORT'), () =>
+  console.log('Listening at ' + app.get('PORT')))
