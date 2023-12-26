@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import Pusher from 'pusher-js';
+
 import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
 import { scrollToBottom } from '../../utilities/common';
@@ -15,8 +17,22 @@ interface IChatAreaProps {
     messages: []
 }
 
+const API_KEY = process.env.REACT_APP_API_KEY || '';
+
 export class ChatArea extends React.Component {
   private chatAreaRef = React.createRef<HTMLDivElement>();
+  
+
+  componentDidMount(): void {
+    const pusher = new Pusher(API_KEY, {
+      cluster: 'eu',
+      forceTLS: true
+    });
+    const channel = pusher.subscribe('chat');
+    channel.bind('message', data => {
+      console.log('>>> new message received: ', data)
+    });
+  }
 
   public render() {
     const { messages } = this.props as IChatAreaProps;
