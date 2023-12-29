@@ -6,6 +6,8 @@ import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
 import { scrollToBottom } from '../../utilities/common';
 import { IMessage } from '../Message/Message';
+import store from 'src/store';
+import { messageReceived } from 'src/store/message/actions';
 
 interface IChatAreaState {
   messageState: {
@@ -30,7 +32,7 @@ export class ChatArea extends React.Component {
     });
     const channel = pusher.subscribe('chat');
     channel.bind('message', data => {
-      console.log('>>> new message received: ', data)
+      store.dispatch(messageReceived(data));
     });
   }
 

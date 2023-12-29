@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { connectSocket } from '../../store/socket/actions';
 import StyledNavigation from './StyledNavigation';
 import { faCog, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,14 +10,9 @@ import { IAppContext } from '../../utilities/TranslationsProvider';
 import { IMessage } from '../Message/Message';
 import { isPageActive } from '../../utilities/common';
 
-interface INavDispatchProps {
-  connectToSockets: () => void;
-}
-
 interface INavProps {
   appContext: IAppContext;
   messages: [];
-  connectToSockets: () => void;
   username: string;
 }
 
@@ -38,10 +31,6 @@ export class Navigation extends React.Component<INavProps, INavState> {
       unreadMessages: 0,
       receivedUnreadMessages: [],
     };
-  }
-
-  public componentDidMount(): void {
-    this.props.connectToSockets();
   }
 
   public componentDidUpdate(prevProps: any): void {
@@ -112,8 +101,4 @@ const mapStateToProps = (state: any) => ({
   username: state.messageState.username,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<any>): INavDispatchProps => ({
-  connectToSockets: () => dispatch(connectSocket())
-});
-
-export default withTranslations(connect(mapStateToProps, mapDispatchToProps)(Navigation));
+export default withTranslations(connect(mapStateToProps)(Navigation));

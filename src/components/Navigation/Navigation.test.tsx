@@ -8,7 +8,7 @@ jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
   return shallow(<Navigation messages={[]} username={'guest0001'}
-                             appContext={translationsMock} connectToSockets={jest.fn}/>)
+                             appContext={translationsMock} />)
 };
 
 describe('Navigation component', () => {

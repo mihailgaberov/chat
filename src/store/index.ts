@@ -1,10 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import socketReducer from './socket/reducer';
+
 import messageReducer from './message/reducer';
-import socketMiddleware from './socket/middleware';
+import middleware from './middleware/middleware';
 
 const rootReducer = combineReducers({
-  socketState: socketReducer,
   messageState: messageReducer
 });
 
@@ -12,7 +11,7 @@ const rootReducer = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const index = {
-  ...createStore(rootReducer, composeEnhancers(applyMiddleware(socketMiddleware)))
+  ...createStore(rootReducer, composeEnhancers(applyMiddleware(middleware)))
 };
 
 export default index;

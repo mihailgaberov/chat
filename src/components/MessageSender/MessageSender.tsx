@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import { Dispatch } from 'redux';
 
-import { sendMessage } from '../../store/message/actions';
-import StyledMessageSender from './StyledMessageSender';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { readRecord } from '../../utilities/localStorageService';
+import { sendMessage } from '../../store/message/actions';
 import { getTime12Hours, getTime24hours } from '../../utilities/common';
+import { readRecord } from '../../utilities/localStorageService';
+import StyledMessageSender from './StyledMessageSender';
 
 interface IMessageSenderDispatchProps {
   sendMessage: (message: { from: string, content: string, time: string }) => void;
@@ -98,8 +97,6 @@ export class MessageSender extends React.Component {
     if (chatMessage !== '') {
       // @ts-ignore
       this.props.sendMessage({ from: username, content: chatMessage, time: this.getTime() });
-      console.log('>>> chat msg: ', chatMessage)
-      axios.post('http://localhost:3001/message', { from: username, content: chatMessage, time: this.getTime() });
     }
   };
 
