@@ -26,6 +26,6 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "client/src/setupTests.ts"
+    "src/setupTests.ts"
   ]
 }
