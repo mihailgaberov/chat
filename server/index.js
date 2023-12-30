@@ -9,8 +9,6 @@ const app = express();
 const httpServer = http.createServer(app);
 app.use(cors());
 
-
-console.log('>>> process.env.PUSHER_APP_ID: ', process.env.PUSHER_APP_ID);
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
   key: process.env.PUSHER_APP_KEY,
