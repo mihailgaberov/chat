@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/client/node_modules
+/server/node_modules
 
 # testing
 /coverage
@@ -17,3 +19,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea/
+/client/.yarn
+/server/.yarn
