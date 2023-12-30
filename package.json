@@ -45,7 +45,6 @@
     "@types/react-redux": "^7.1.25",
     "@types/react-router-dom": "^5.3.3",
     "@types/sinon": "^7.0.3",
-    "@types/socket.io": "^2.1.2",
     "enzyme": "^3.8.0",
     "enzyme-to-json": "^3.3.5",
     "lodash": "^4.17.21",
