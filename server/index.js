@@ -1,15 +1,14 @@
-const Pusher = require('pusher');
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import Pusher from 'pusher';
+import express from 'express';
 
-require('dotenv').config();
+import cors from 'cors';
+import http from 'http';
+import 'dotenv/config'
 
 const app = express();
-
+const httpServer = http.createServer(app);
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
   key: process.env.PUSHER_APP_KEY,
@@ -25,5 +24,7 @@ app.post('/message', (req, res) => {
   res.send(payload)
 });
 
-app.listen(app.get('PORT'), () =>
-  console.log('Listening at ' + app.get('PORT')))
+// Modified server startup
+await new Promise((resolve) => httpServer.listen({ port: 3001 }, resolve));
+
+console.log(`🚀 Server ready at http://${httpServer.address().address}:${httpServer.address().port}`);
