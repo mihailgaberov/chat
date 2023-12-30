@@ -6,8 +6,8 @@ import StyledChatArea from './StyledChatArea';
 import Message from '../Message';
 import { scrollToBottom } from '../../utilities/common';
 import { IMessage } from '../Message/Message';
-import store from 'src/store';
-import { messageReceived } from 'src/store/message/actions';
+import store from 'client/src/store';
+import { messageReceived } from 'client/src/store/message/actions';
 
 interface IChatAreaState {
   messageState: {
