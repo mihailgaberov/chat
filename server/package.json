@@ -4,7 +4,7 @@
   "description": "Chat application server",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Mihail Gaberov <mihail.gaberov@gmail.com>",
