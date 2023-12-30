@@ -9,6 +9,8 @@ const app = express();
 const httpServer = http.createServer(app);
 app.use(cors());
 
+
+console.log('>>> process.env.PUSHER_APP_ID: ', process.env.PUSHER_APP_ID);
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
   key: process.env.PUSHER_APP_KEY,
@@ -16,7 +18,8 @@ const pusher = new Pusher({
   cluster: "eu",
   useTLS: true
 });
-app.set('PORT', process.env.PORT || 3001);
+const port = process.env.PORT || 3001;
+app.set('PORT', port);
 
 app.post('/message', (req, res) => {
   const payload = req.body;
@@ -25,6 +28,6 @@ app.post('/message', (req, res) => {
 });
 
 // Modified server startup
-await new Promise((resolve) => httpServer.listen({ port: 3001 }, resolve));
+await new Promise((resolve) => httpServer.listen({ port: port }, resolve));
 
 console.log(`🚀 Server ready at http://${httpServer.address().address}:${httpServer.address().port}`);
