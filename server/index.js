@@ -7,7 +7,11 @@ import 'dotenv/config'
 
 const app = express();
 const httpServer = http.createServer(app);
-app.use(cors());
+app.use(
+  '/',
+  cors(),
+  express.json(),
+);
 
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
