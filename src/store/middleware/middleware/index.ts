@@ -1,7 +1,7 @@
 import axios from "axios";
 import { messageSent, SEND_MESSAGE_REQUEST } from "../../message/actions";
 
-const SERVER_ENDPOINT = `http://localhost:3001/message`
+const SERVER_ENDPOINT = process.env.REACT_APP_SERVER_ENDPOINT || '';
 
 const middleware = (store: any) => {
   return (next: any) => async (action: any) => {
