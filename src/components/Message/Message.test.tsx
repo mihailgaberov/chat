@@ -3,8 +3,6 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
 import Message from './Message';
-import Nickname from '../Nickname';
-import Timestamp from '../Timestamp';
 
 const setup = (type = 'received') => {
   return render(<Message message={{from: 'guest0001', content: 'hi', time: '11:03', type}}/>)
