@@ -4,7 +4,6 @@ import { describe, expect, it } from 'vitest';
 
 import { ChatArea } from './ChatArea';
 import { IMessage } from '../Message/Message';
-import '@testing-library/jest-dom';
 
 const message1: IMessage = {from: 'Mihail', content: 'Hello world!', time: '12:12', type: 'sent'};
 const message2: IMessage = {from: 'Mihail', content: 'Hello world!', time: '12:13', type: 'received'};
