@@ -1,13 +1,12 @@
-import { shallow } from 'enzyme';
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+
 import { UserProfile } from './UserProfile';
 import translationsMock from '../../translations/translations-mock';
 
-jest.mock('../../utilities/localStorageService');
-
 const setup = () => {
-  // @ts-ignore
-  return shallow(<UserProfile translations={translationsMock} changeUsername={jest.fn()}/>)
+  return render(<UserProfile translations={translationsMock} changeUsername={() => {}}/>)
 };
 
 describe('UserProfile component', () => {
@@ -18,21 +17,7 @@ describe('UserProfile component', () => {
 
   it('should render input field with username in it', () => {
     const wrapper = setup();
-    const instance = wrapper.instance();
-    instance.setState({ username: 'guest0001' }, () => {
-      expect(wrapper.find('input').props().value).toBe('guest0001');
-    });
-  });
-
-  it('should be able to change user name', () => {
-    const wrapper = setup();
-    const instance = wrapper.instance();
-    // @ts-ignore
-    const spy = jest.spyOn(instance, 'handleUserNameChange');
-
-    wrapper.find('input').simulate('change', { currentTarget: { value: 'guest0001' } });
-    setTimeout(() => {
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
+    fireEvent.change(wrapper.getByRole('textbox'), { target: { value: 'guest0001' } });
+    expect(wrapper.getByRole('textbox')).toHaveValue('guest0001');
   });
 });
