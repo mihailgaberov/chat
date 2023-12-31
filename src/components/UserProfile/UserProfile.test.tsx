@@ -6,7 +6,7 @@ import { UserProfile } from './UserProfile';
 import translationsMock from '../../translations/translations-mock';
 
 const setup = () => {
-  return render(<UserProfile translations={translationsMock} changeUsername={() => {}}/>)
+  return render(<UserProfile translations={translationsMock} changeUsername={()=>''}/>)
 };
 
 describe('UserProfile component', () => {
