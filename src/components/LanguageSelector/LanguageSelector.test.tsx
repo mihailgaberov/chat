@@ -1,18 +1,27 @@
-import { shallow } from 'enzyme';
 import * as React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+
 import LanguageSelector from './LanguageSelector';
 import translationsMock from '../../translations/translations-mock';
 
-jest.mock('../../utilities/localStorageService');
 
 
 const setup = () => {
-  return shallow(<LanguageSelector translations={translationsMock} changeLanguage={jest.fn()}/>)
+  return render(<LanguageSelector translations={translationsMock} changeLanguage={() => {}}/>)
 };
 
-describe('LanguageSelector component', () => {
-  it('renders without crashing', () => {
+
+describe('LanguageSelector', () => {
+    it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
+  });
+
+  it('should render with English option selected', () => {
+    setup();
+    expect(screen.getByText(/Language/i)).toBeVisible();
+    expect(screen.getByText(/English/i)).toBeVisible();
+    expect(screen.getByText(/Deutsch/i)).toBeVisible();
   });
 });
