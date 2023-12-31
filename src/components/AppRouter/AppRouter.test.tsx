@@ -1,14 +1,10 @@
-import { shallow } from 'enzyme';
-import * as React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { AppRouter } from './AppRouter';
+import * as React from 'react';
 
-const setup = () => {
-  return shallow(<AppRouter/>)
-};
-
-describe('AppRouter component', () => {
-  it('renders without crashing', () => {
-    const wrapper = setup();
-    expect(wrapper).not.toBe(null)
+describe('AppRouter', () => {
+  it('renders correctly nav links', async () => {
+    render(<AppRouter />).to.be.in.document()
   });
 });
