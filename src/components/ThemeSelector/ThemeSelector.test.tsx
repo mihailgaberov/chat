@@ -1,15 +1,16 @@
-import { shallow } from 'enzyme';
 import * as React from 'react';
+import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+
 import ThemeSelector from './ThemeSelector';
 import translationsMock from '../../translations/translations-mock';
 
-jest.mock('../../utilities/localStorageService');
 
 const setup = () => {
-  return shallow(<ThemeSelector translations={translationsMock} changeTheme={jest.fn()}/>)
+  return render(<ThemeSelector translations={translationsMock} changeTheme={()=>{}}/>)
 };
 
-describe('ThemeSelector component', () => {
+describe('ThemeSelector', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
