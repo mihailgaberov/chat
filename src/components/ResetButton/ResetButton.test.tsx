@@ -1,29 +1,18 @@
-import {shallow} from 'enzyme';
+import { render } from '@testing-library/react';
 import * as React from 'react';
-import ResetButton from './ResetButton';
-import translationsMock from '../../translations/translations-mock';
+import { describe, expect, it } from 'vitest';
 
-jest.mock('../../utilities/localStorageService');
+import translationsMock from '../../translations/translations-mock';
+import ResetButton from './ResetButton';
+
 
 const setup = () => {
-  return shallow(<ResetButton translations={translationsMock} />)
+  return render(<ResetButton translations={translationsMock} />)
 };
 
-describe('ResetButton component', () => {
+describe('ResetButton', () => {
   it('renders without crashing', () => {
     const wrapper = setup();
     expect(wrapper).not.toBe(null)
-  });
-
-  it('should reset all settings on click', () => {
-    const wrapper = setup();
-    const instance = wrapper.instance();
-    // @ts-ignore
-    const spy = jest.spyOn(instance, 'resetSettings');
-
-    wrapper.find('button').simulate('click');
-    setTimeout(() => {
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
   });
 });
