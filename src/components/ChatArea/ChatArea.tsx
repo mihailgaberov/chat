@@ -12,10 +12,10 @@ interface IChatAreaState {
 }
 
 interface IChatAreaProps {
-    messages: []
+    messages: IMessage[]
 }
 
-export class ChatArea extends React.Component {
+export class ChatArea extends React.Component<IChatAreaProps> {
   private chatAreaRef = React.createRef<HTMLDivElement>();
 
   public render() {
