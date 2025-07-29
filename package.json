@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "express": "^4.21.2",
     "get-urls": "^11.0.0",
-    "linkifyjs": "^2.1.7",
+    "linkifyjs": "^4.3.2",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
